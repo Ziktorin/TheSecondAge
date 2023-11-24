@@ -30,12 +30,12 @@ RaceList["forest terloyt"] = {
     scores : [0, 0, 0, 0, 0, 0],
       scorestxt : "+2 to any ability score and +1 to any ability score, one must be Dexterity",
     trait : [
-      "Terloyt (+2 to any ability score and +1 to any ability score, one must be Dexterity)",
-          "You are a humanoid. You also count as a fey for any prerequisite or effect that requires you to be a fey",
-          "Naive and timid: You have disadvantage on saving throws against being charmed and frightened",
-          "Terloytian Adaptations: Your long and prehensile tail allows you to move with unprecedented agility. You gain a climbing speed equal to your movement speed, and you cannot be slowed by non-magical difficult terrain.",
-          "Gift of the Avenger of Grace: You are transformed by the fickle force of nature. Your color and shape depend on the light level.\n   \u2022In the light:\n      \u2219 Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      \u2219 Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      \u2219 Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      \u2219 Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light."
-    ].join("\n\u25c6 "),
+          "Terloyt (+2 to any ability score and +1 to any ability score, one must be Dexterity).",
+          "You are a humanoid. You also count as a fey for any prerequisite or effect that requires you to be a fey.",
+          "Naive and timid: You have disadvantage on saving throws against being charmed and frightened.",
+          "Gift of the Avenger of Grace (see notes page).",
+          "Terloytian Adaptations (see notes page)."
+    ].join("\n"),
       skills : ["Survival"],
       features : {
           "Gift of the Avenger of Grace" : {
@@ -45,6 +45,16 @@ RaceList["forest terloyt"] = {
               usagescalc : "event.value = Number(How('Proficiency Bonus'));"
           }
       },
+    toNotesPage : [{
+        name : "Gift of the Avenger of Grace",
+        note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n   \u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.   \n\u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.   \n\u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
+        page3notes : true
+    },
+    {
+        name : "Terloytian Adaptations",
+        note : "\nYour long and prehensile tail allows you to move with unprecedented agility. You gain a climbing speed equal to your movement speed, and you cannot be slowed by non-magical difficult terrain.",
+        page3notes : true
+    }],
     variants : []
   };
 
@@ -67,12 +77,12 @@ RaceList["desert terloyt"] = {
 	scores : [0, 0, 0, 0, 0, 0],
     scorestxt : "+2 to any ability score and +1 to any ability score, one must be Dexterity",
 	trait : [
-		"Terloyt (+2 to any ability score and +1 to any ability score, one must be Dexterity)",
-        "You are a humanoid. You also count as a fey for any prerequisite or effect that requires you to be a fey",
-        "Naive and timid: You have disadvantage on saving throws against being charmed and frightened",
-        "Terloytian Adaptations: To hunt or avoid creatures buried in the sand, the Avenger of Grace has given you a vibration-sensitive tail. You gain a tremor sense over a 15-foot radius. Also, you are adapted to hot climates.",
-        "Gift of the Avenger of Grace: You are transformed by the fickle force of nature. Your color and shape depend on the light level.\n   \u2022In the light:\n      \u2219 Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      \u2219 Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      \u2219 Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      \u2219 Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light."
-	].join("\n\u25c6 "),
+		"Terloyt (+2 to any ability score and +1 to any ability score, one must be Dexterity).",
+        "You are a humanoid. You also count as a fey for any prerequisite or effect that requires you to be a fey.",
+        "Naive and timid: You have disadvantage on saving throws against being charmed and frightened.",
+        "Gift of the Avenger of Grace (see notes page).",
+        "Terloytian Adaptations (see notes page)."
+	].join("\n"),
     skills : ["Survival"],
     features : {
         "Gift of the Avenger of Grace" : {
@@ -82,6 +92,16 @@ RaceList["desert terloyt"] = {
             usagescalc : "event.value = Number(How('Proficiency Bonus'));"
         }
     },
+    toNotesPage : [{
+        name : "Gift of the Avenger of Grace",
+        note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n   \u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
+        page3notes : true
+    },
+    {
+        name : "Terloytian Adaptations",
+        note : "\nTo hunt or avoid creatures buried in the sand, the Avenger of Grace has given you a vibration-sensitive tail. You gain a tremor sense over a 15-foot radius. Also, you are adapted to hot climates.",
+        page3notes : true
+    }],
 	variants : []
 };
 
@@ -105,11 +125,12 @@ RaceList["tundra terloyt"] = {
 	scores : [0, 0, 0, 0, 0, 0],
     scorestxt : "+2 to any ability score and +1 to any ability score, one must be Dexterity",
 	trait : [
-		"Terloyt (+2 to any ability score and +1 to any ability score, one must be Dexterity)",
-        "You are a humanoid. You also count as a fey for any prerequisite or effect that requires you to be a fey",
-        "Naive and timid: You have disadvantage on saving throws against being charmed and frightened",
-        "Terloytian Adaptations: You can use your big, fluffy tail to cover your tracks. You and your group (if you go last) cannot be tracked by footprints on the ground. You are also covered in thick white fur, which makes you adapted to cold climates."
-	].join("\n\u25c6 "),
+		"Terloyt (+2 to any ability score and +1 to any ability score, one must be Dexterity).",
+        "You are a humanoid. You also count as a fey for any prerequisite or effect that requires you to be a fey.",
+        "Naive and timid: You have disadvantage on saving throws against being charmed and frightened.",
+        "Gift of the Avenger of Grace (see notes page).",
+        "Terloytian Adaptations (see notes page)."
+	].join("\n"),
     skills : ["Survival"],
     features : {
         "Gift of the Avenger of Grace" : {
@@ -119,6 +140,16 @@ RaceList["tundra terloyt"] = {
             usagescalc : "event.value = Number(How('Proficiency Bonus'));"
         }
     },
+    toNotesPage : [{
+        name : "Gift of the Avenger of Grace",
+        note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n   \u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
+        page3notes : true
+    },
+    {
+        name : "Terloytian Adaptations",
+        note : "\nYou can use your big, fluffy tail to cover your tracks. You and your group (if you go last) cannot be tracked by footprints on the ground. You are also covered in thick white fur, which makes you adapted to cold climates.",
+        page3notes : true
+    }],
 	variants : []
 };
 
@@ -142,11 +173,12 @@ RaceList["shore terloyt"] = {
 	scores : [0, 0, 0, 0, 0, 0],
     scorestxt : "+2 to any ability score and +1 to any ability score, one must be Dexterity",
 	trait : [
-		"Terloyt (+2 to any ability score and +1 to any ability score, one must be Dexterity)",
-        "You are a humanoid. You also count as a fey for any prerequisite or effect that requires you to be a fey",
-        "Naive and timid: You have disadvantage on saving throws against being charmed and frightened",
-        "Terloytian Adaptations: You instinctively hold your breath when in danger and can hold it for 1 hour. Your strong tail with seal-like fins gives you a swimming speed of 40 feet."
-	].join("\n\u25c6 "),
+		"Terloyt (+2 to any ability score and +1 to any ability score, one must be Dexterity).",
+        "You are a humanoid. You also count as a fey for any prerequisite or effect that requires you to be a fey.",
+        "Naive and timid: You have disadvantage on saving throws against being charmed and frightened.",
+        "Gift of the Avenger of Grace (see notes page).",
+        "Terloytian Adaptations (see notes page)."
+	].join("\n"),
     skills : ["Survival"],
     features : {
         "Gift of the Avenger of Grace" : {
@@ -156,6 +188,16 @@ RaceList["shore terloyt"] = {
             usagescalc : "event.value = Number(How('Proficiency Bonus'));"
         }
     },
+    toNotesPage : [{
+        name : "Gift of the Avenger of Grace",
+        note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n   \u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
+        page3notes : true
+    },
+    {
+        name : "Terloytian Adaptations",
+        note : "\nYou instinctively hold your breath when in danger and can hold it for 1 hour. Your strong tail with seal-like fins gives you a swimming speed of 40 feet.",
+        page3notes : true
+    }],
 	variants : []
 };
 
