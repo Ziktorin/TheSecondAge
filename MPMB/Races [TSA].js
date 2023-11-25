@@ -1,5 +1,5 @@
 
-var iFileName = "Terloyt.js";
+var iFileName = "Races [TSA].js";
 RequiredSheetVersion(13.1);
 
 SourceList["The Second Age"] = {
