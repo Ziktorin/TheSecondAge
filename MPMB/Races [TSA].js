@@ -368,7 +368,7 @@ RaceList["scourge hinammet"] = {
 	speed : {
 		walk : { spd : 30, enc : 20 }
 	},
-	languageProfs : ["Common", "Sub"],
+	languageProfs : ["Common", "Sun"],
 	vision : [["Darkvision", 60]],
 	dmgres : ["Necrotic", "Radiant"],
 	age : " reach adulthood in their late teens and live around 160 years",
