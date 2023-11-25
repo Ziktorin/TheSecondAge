@@ -10,6 +10,10 @@ SourceList["The Second Age"] = {
 	date : "2023/11/24"
 };
 
+// >>>>>>>>>>>>>>>> //
+// >>> Terloyt  >>> //
+// >>>>>>>>>>>>>>>> //
+
 RaceList["forest terloyt"] = {
     regExpSearch : /^(?=.*(terloyt))(?=.*\b(forest)?\b).*$/i,
     name : "Terloyt, Forest",
@@ -201,3 +205,205 @@ RaceList["shore terloyt"] = {
 	variants : []
 };
 
+// >>>>>>>>>>>>>>>> //
+// >>> Hinammet >>> //
+// >>>>>>>>>>>>>>>> //
+
+RaceList["hinammet"] = {
+	regExpSearch : /^(?=.*(hinammet))$/i,
+	name : "Hinammet",
+	source : [["TSA", 0]],
+	plural : "Hinammet",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	languageProfs : ["Common", "Sun"],
+	vision : [["Darkvision", 60]],
+	dmgres : ["Necrotic", "Radiant"],
+	age : " reach adulthood in their late teens and live around 160 years",
+	height : " range from barely 5 to well over 6 feet tall (4'8\" + 2d10\")",
+	weight : " weigh around 165 lb (110 + 2d10 \xD7 2d4 lb)",
+	heightMetric : " range from barely 1,5 to well over 1,8 metres tall (145 + 5d10 cm)",
+	weightMetric : " weigh around 75 kg (50 + 5d10 \xD7 4d4 / 10 kg)",
+	scores : [0, 0, 0, 0, 0, 0],
+	trait : "Hinammet (+2 to any ability score and +1 to any ability score, one must be Strength)\n\nCelestial Legacy:\n   I know the Light cantrip.\n   Once I reach 3rd level, I can cast the Lesser Restoration spell once per long rest.\n   Once I reach 5th level, I can cast the Daylight spell once per long rest.\n   Charisma is my spellcasting ability for these spells.",
+	spellcastingAbility : 6,
+	spellcastingBonus : {
+		name : "Celestial Legacy (level 1)",
+		spells : ["light"],
+		selection : ["light"],
+		firstCol : 'atwill'
+	},
+	features : {
+		"lesser restoration" : {
+			name : "Celestial Legacy (level 3)",
+			limfeaname : "Lesser Restoration",
+			usages : 1,
+			minlevel : 3,
+			recovery : "long rest",
+			spellcastingBonus : {
+				name : "Celestial Legacy (level 3)",
+				spells : ["lesser restoration"],
+				selection : ["lesser restoration"],
+				firstCol : 'oncelr'
+			}
+		},
+		"daylight" : {
+			name : "Celestial Legacy (level 5)",
+			limfeaname : "Daylight",
+			usages : 1,
+			minlevel : 5,
+			recovery : "long rest",
+			spellcastingBonus : {
+				name : "Celestial Legacy (level 5)",
+				spells : ["daylight"],
+				selection : ["daylight"],
+				firstCol : 'oncelr'
+			}
+		}
+	}
+};
+
+RaceList["fallen hinammet"] = {
+	regExpSearch : /^(?=.*(hinammet))(?=.*\bfallen?\b).*$/i,
+	name : "Fallen Hinammet",
+	source : [["TSA", 0]],
+	plural : "Fallen Hinammet",
+	sortname : "Hinammet, Fallen",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	languageProfs : ["Common", "Sun"],
+	vision : [["Darkvision", 60]],
+	dmgres : ["Necrotic", "Radiant"],
+	age : " reach adulthood in their late teens and live around 160 years",
+	height : " range from barely 5 to well over 6 feet tall (4'8\" + 2d10\")",
+	weight : " weigh around 165 lb (110 + 2d10 \xD7 2d4 lb)",
+	heightMetric : " range from barely 1,5 to well over 1,8 metres tall (145 + 5d10 cm)",
+	weightMetric : " weigh around 75 kg (50 + 5d10 \xD7 4d4 / 10 kg)",
+	scores : [0, 0, 0, 0, 0, 0],
+	trait : "Fallen Hinammet (+2 to any ability score and +1 to any ability score, one must be Strength)" + (typePF ? "\n" : " ") + "Light Bearer: I know the Light cantrip.\nHealing Hands: As an action, once per long rest, I can touch to heal for my level in HP.\nNecrotic Shroud: Once per long rest when I'm 3rd level, I can use an action to transform, causing all within 10 ft of me to make a Cha" + (typePF ? "" : "risma") + " saving throw (DC 8 + Cha mod + Prof Bonus) or be frightened of me until the end of my next turn. This lasts for 1 minute or until I end it as a bonus action. Once on my turn I can have one of my attacks or spells deals my level in extra necrotic damage to one target.",
+	abilitySave : 6,
+	spellcastingAbility : 6,
+	spellcastingBonus : {
+		name : "Light Bearer",
+		spells : ["light"],
+		selection : ["light"],
+		firstCol : 'atwill'
+	},
+	features : {
+		"healing hands" : {
+			name : "Healing Hands",
+			usages : 1,
+			minlevel : 1,
+			recovery : "long rest",
+			additional : levels.map(function (n) { return n + " HP"; }),
+			action : ["action", ""]
+		},
+		"necrotic shroud" : {
+			name : "Necrotic Shroud",
+			usages : 1,
+			minlevel : 3,
+			recovery : "long rest",
+			additional : levels.map(function (n) { return n < 3 ? "" : "+" + n + " damage"; }),
+			action : [["action", " (start)"], ['bonus action', ' (end)']]
+		}
+	}
+};
+RaceList["protector hinammet"] = {
+	regExpSearch : /^(?=.*(hinammet))(?=.*\bprotector?\b).*$/i,
+	name : "Protector Hinammet",
+	source : [["TSA", 0]],
+	plural : "Protector Hinammet",
+	sortname : "Hinammet, Protector",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	languageProfs : ["Common", "Sun"],
+	vision : [["Darkvision", 60]],
+	dmgres : ["Necrotic", "Radiant"],
+	age : " reach adulthood in their late teens and live around 160 years",
+	height : " range from barely 5 to well over 6 feet tall (4'8\" + 2d10\")",
+	weight : " weigh around 165 lb (110 + 2d10 \xD7 2d4 lb)",
+	heightMetric : " range from barely 1,5 to well over 1,8 metres tall (145 + 5d10 cm)",
+	weightMetric : " weigh around 75 kg (50 + 5d10 \xD7 4d4 / 10 kg)",
+	scores : [0, 0, 0, 0, 0, 0],
+	trait : "Protector Hinammet (+2 to any ability score and +1 to any ability score, one must be Strength)\nLight Bearer: I know the Light cantrip.\nHealing Hands: As an action, once per long rest, I can touch to heal for my level in HP.\nRadiant Soul: Once per long rest when I'm 3rd level, I can use an action to transform, gaining glimmer in my eyes and two incorporeal wings. For 1 minute or until I end it as a bonus action, I have 30 feet fly speed; once on my turn I can have one of my attacks or spells deal my level in extra radiant damage to one target.",
+	spellcastingAbility : 6,
+	spellcastingBonus : {
+		name : "Light Bearer",
+		spells : ["light"],
+		selection : ["light"],
+		firstCol : 'atwill'
+	},
+	features : {
+		"healing hands" : {
+			name : "Healing Hands",
+			usages : 1,
+			minlevel : 1,
+			recovery : "long rest",
+			additional : levels.map(function (n) { return n + " HP"; }),
+			action : ["action", ""]
+		},
+		"radiant soul" : {
+			name : "Radiant Soul",
+			usages : 1,
+			minlevel : 3,
+			recovery : "long rest",
+			additional : levels.map(function (n) { return n < 3 ? "" : "+" + n + " damage"; }),
+			action : [["action", " (start)"], ['bonus action', ' (end)']]
+		}
+	}
+};
+RaceList["scourge hinammet"] = {
+	regExpSearch : /^(?=.*(hinammet))(?=.*\bscourge?\b).*$/i,
+	name : "Scourge Hinammet",
+	source : [["TSA", 0]],
+	plural : "Scourge Hinammet",
+	sortname : "Hinammet, Scourge",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	languageProfs : ["Common", "Sub"],
+	vision : [["Darkvision", 60]],
+	dmgres : ["Necrotic", "Radiant"],
+	age : " reach adulthood in their late teens and live around 160 years",
+	height : " range from barely 5 to well over 6 feet tall (4'8\" + 2d10\")",
+	weight : " weigh around 165 lb (110 + 2d10 \xD7 2d4 lb)",
+	heightMetric : " range from barely 1,5 to well over 1,8 metres tall (145 + 5d10 cm)",
+	weightMetric : " weigh around 75 kg (50 + 5d10 \xD7 4d4 / 10 kg)",
+	scores : [0, 0, 1, 0, 0, 2],
+	trait : "Scourge Hinammet (+1 Constitution, +2 Charisma)" + (typePF ? "\n" : " ") + "Light Bearer: I know the Light cantrip.\nHealing Hands: As an action, once per long rest, I can touch to heal for my level in HP.\nRadiant Consumption: Once per long rest when I'm 3rd level, I can use an action to radiate bright light in 10-ft radius and dim light for another 10-ft, for 1 minute or until I end it as a bonus action. Once on my turn my attack or spell deals my level in extra radiant damage to one target, and at the end of my turns all creatures within 10 ft of me, including myself, take half my level in radiant damage.",
+	spellcastingAbility : 6,
+	spellcastingBonus : {
+		name : "Light Bearer",
+		spells : ["light"],
+		selection : ["light"],
+		firstCol : 'atwill'
+	},
+	features : {
+		"healing hands" : {
+			name : "Healing Hands",
+			usages : 1,
+			minlevel : 1,
+			recovery : "long rest",
+			additional : levels.map(function (n) { return n + " HP"; }),
+			action : ["action", ""]
+		},
+		"radiant consumption" : {
+			name : "Radiant Consumption",
+			usages : 1,
+			minlevel : 3,
+			recovery : "long rest",
+			additional : levels.map(function (n) {
+				if (n < 3) return ""
+				return Math.ceil(n/2) + "/" + n + " damage";
+			}),
+			action : [["action", " (start)"], ['bonus action', ' (end)']]
+		}
+	}
+};
