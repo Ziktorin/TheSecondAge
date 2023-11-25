@@ -1,250 +1,280 @@
-"race": [
-    {
-        "name": "Terloyt",
-        "source": "TSA",
-        "page": "0",
-        "ability": [{
-            "choose": {
-                "weighted": {
-                    "weights": [
-                        2,
-                        1
-                    ],
-                    "from": [
-                        "cha",
-                        "con",
-                        "dex",
-                        "int",
-                        "str",
-                        "wis"
-                    ]
+{
+	"$schema": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/homebrew.json",
+	"_meta": {
+		"sources": [
+			{
+				"json": "SaurianRace",
+				"abbreviation": "SaurianRace",
+				"full": "Saurian Race",
+				"authors": [
+					"Benjamin Huffman",
+					"Sterling Vermin Adventuring Co."
+				],
+				"convertedBy": [
+					"p4535992"
+				],
+				"version": "2.0",
+				"color": "a39853",
+				"url": "https://www.dmsguild.com/product/203521/Saurian-an-Original-Race-for-DD-5e",
+				"targetSchema": "1.7.0"
+			}
+		],
+		"optionalFeatureTypes": {
+			"RACE:SAU": "Race Saurian"
+		},
+		"dateAdded": 1659384262,
+		"dateLastModified": 1690141042,
+		"_dateLastModifiedHash": "60908e541f"
+	},
+    "race": [
+        {
+            "name": "Terloyt",
+            "source": "TSA",
+            "page": "0",
+            "ability": [{
+                "choose": {
+                    "weighted": {
+                        "weights": [
+                            2,
+                            1
+                        ],
+                        "from": [
+                            "cha",
+                            "con",
+                            "dex",
+                            "int",
+                            "str",
+                            "wis"
+                        ]
+                    }
                 }
-            }
-        }],
-        "languageProficiencies": [
-            {
-                "common": true,
-                "nature": true,
-            }
-        ],
+            }],
+            "languageProficiencies": [
+                {
+                    "common": true,
+                    "nature": true,
+                }
+            ],
 
-        "size": ["S"],
-        "speed": 30,
-        "darkvision": 60,
-        "entries": [
-            {
-                "type": "entries",
-                "name": "Creature type",
-                "entries": [
-                    "You are a humanoid. You are also considered a fairy for any necessary condition or effect that requires you to be a fairy."
-                ]
-            },
-            {
-                "type": "entries",
-                "name": "Ability Score Increase",
-                "entries": [
-                    "Increase one ability score of your choice by 2 and a different ability score of your choice by 1. One of the characteristics must be Agility"
-                ]
-            },
-            {
-                "type": "entries",
-                "name": "Age",
-                "entries": [
-                    "Terloits are sometimes children who get lost in nature. You retain this physical age for life. The lifespan of terloits is unknown."
-                ]
-            },
-            {
-                "type": "entries",
-                "name": "Size",
-                "page": 3,
-                "entries": [
-                    "Beastfolk come in all sizes. You can choose to be Medium or Small."
-                ]
-            },
-            {
-                "type": "entries",
-                "name": "Speed",
-                "entries": [
-                    "Your base walking speed is 30 feet."
-                ]
-            },
-            {
-                "type": "entries",
-                "name": "Alignment",
-                "entries": [
-                    "Tends toward the chaotic."
-                ]
-            },
-            {
-                "type": "entries",
-                "name": "Languages",
-                "entries": [
-                    "You know Common and Nature"
-                ]
-            },
-            {
-                "type": "entries",
-                "name": "Names",
-                "entries": [
-                    "Gaelic"
-                ]
-            },
-            {
-                "type": "entries",
-                "name": "Skills",
-                "entries": [
-                    "You have a Survival skill."
-                ]
-            },
-            {
-                "type": "entries",
-                "name": "Darkvision",
-                "entries": [
-                    "60 ft"
-                ]
-            },
-            {
-                "type": "entries",
-                "name": "Naive and fearful",
-                "entries": [
-                    "You make saving throws against charm and fear with disadvantage"
-                ]
-            },
-            {
-                "type": "entries",
-                "name": "The Avenger of Grace's gift",
-                "entries": [
+            "size": ["S"],
+            "speed": 30,
+            "darkvision": 60,
+            "entries": [
+                {
+                    "type": "entries",
+                    "name": "Creature type",
+                    "entries": [
+                        "You are a humanoid. You are also considered a fairy for any necessary condition or effect that requires you to be a fairy."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Ability Score Increase",
+                    "entries": [
+                        "Increase one ability score of your choice by 2 and a different ability score of your choice by 1. One of the characteristics must be Agility"
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Age",
+                    "entries": [
+                        "Terloits are sometimes children who get lost in nature. You retain this physical age for life. The lifespan of terloits is unknown."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Size",
+                    "page": 3,
+                    "entries": [
+                        "Beastfolk come in all sizes. You can choose to be Medium or Small."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Speed",
+                    "entries": [
+                        "Your base walking speed is 30 feet."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Alignment",
+                    "entries": [
+                        "Tends toward the chaotic."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Languages",
+                    "entries": [
+                        "You know Common and Nature"
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Names",
+                    "entries": [
+                        "Gaelic"
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Skills",
+                    "entries": [
+                        "You have a Survival skill."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Darkvision",
+                    "entries": [
+                        "60 ft"
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Naive and fearful",
+                    "entries": [
+                        "You make saving throws against charm and fear with disadvantage"
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "The Avenger of Grace's gift",
+                    "entries": [
 
+                        {"type": "entries",
+                        "name": "In the light",
+                        "entries":[
+                            {
+							    "type": "list",
+							    "items": [
+                                    {
+                                    "type": "entries",
+                                    "name": "Vengeance of the Day",
+                                    "entries": [
+                                        "Once per turn, when you deal damage to one creature, you may reroll all damage dice. You must use a second damage roll. You may use this skill a number of times equal to your proficiency bonus until the end of an extended rest."
+                                    ]
+                                },
+                                {
+                                    "type": "entries",
+                                    "name": "Clear eyes",
+                                    "entries": [
+                                        "You have advantage on Wisdom (Perception) rolls that rely on sight."
+                                    ]
+                                },
+								
+							    ]
+						    }
+                        ]
+                    },
                     {"type": "entries",
-                    "name": "In the light",
-                    "entries":[
-                        {
-							"type": "list",
-							"items": [
-                                {
-                                "type": "entries",
-                                "name": "Vengeance of the Day",
-                                "entries": [
-                                    "Once per turn, when you deal damage to one creature, you may reroll all damage dice. You must use a second damage roll. You may use this skill a number of times equal to your proficiency bonus until the end of an extended rest."
-                                ]
-                            },
+                        "name": "In the dark",
+                        "entries":[
                             {
-                                "type": "entries",
-                                "name": "Clear eyes",
-                                "entries": [
-                                    "You have advantage on Wisdom (Perception) rolls that rely on sight."
-                                ]
-                            },
-								
-							]
-						}
-                    ]
-                },
-                {"type": "entries",
-                    "name": "In the dark",
-                    "entries":[
-                        {
-							"type": "list",
-							"items": [
+							    "type": "list",
+							    "items": [
+                                    {
+                                    "type": "entries",
+                                    "name": "Grace of the Night",
+                                    "entries": [
+                                        "darkness transforms your form to help you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately follow it up with a Retreat or Ambush action as part of that attack. You may use this skill a number of times equal to your skill bonus until the end of an extended rest."
+                                    ]
+                                },
                                 {
-                                "type": "entries",
-                                "name": "Grace of the Night",
-                                "entries": [
-                                    "darkness transforms your form to help you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately follow it up with a Retreat or Ambush action as part of that attack. You may use this skill a number of times equal to your skill bonus until the end of an extended rest."
-                                ]
-                            },
-                            {
-                                "type": "entries",
-                                "name": "Sensitive ears",
-                                "entries": [
-                                    "You have advantage on Wisdom (Perception) rolls that rely on hearing."
-                                ]
-                            },
+                                    "type": "entries",
+                                    "name": "Sensitive ears",
+                                    "entries": [
+                                        "You have advantage on Wisdom (Perception) rolls that rely on hearing."
+                                    ]
+                                },
 								
-							]
-						}
-                    ]
-                },
-                {"type": "entries",
-                    "name": "In the dimlight",
-                    "entries":[
-                        {
-							"type": "list",
-							"items": [
-								"You may choose any of the shapes. To change shape during combat, you must move at least 10 feet to a shadow or light source.",
-							]
-						}
-                    ]
-                },
+							    ]
+						    }
+                        ]
+                    },
+                    {"type": "entries",
+                        "name": "In the dimlight",
+                        "entries":[
+                            {
+							    "type": "list",
+							    "items": [
+								    "You may choose any of the shapes. To change shape during combat, you must move at least 10 feet to a shadow or light source.",
+							    ]
+						    }
+                        ]
+                    },
 
+                    ]
+                },
+            
+            ],
+
+
+        },
+
+        "subraces": [
+            {
+                "name": "forest/mountain terloyt",
+                "source": "TSA",
+                "entries": [
+                    {
+                        "type": "entries",
+                        "name": "Forest and mountains",
+                        "entries": [
+                            "Your long and tenacious tail allows you to move with unprecedented agility. You gain a climbing speed equal to your movement speed, and you cannot be slowed by non-magical difficult terrain."
+                        ]
+                    },
                 ]
+            
             },
-            
-        ],
-
-
-    },
-
-    "subraces": [
-        {
-            "name": "forest/mountain terloyt",
-            "source": "TSA",
-            "entries": [
-                {
-                    "type": "entries",
-                    "name": "Forest and mountains",
-                    "entries": [
-                        "Your long and tenacious tail allows you to move with unprecedented agility. You gain a climbing speed equal to your movement speed, and you cannot be slowed by non-magical difficult terrain."
-                    ]
-                },
-            ]
-            
-        },
-        {
-            "name": "desert terloyt",
-            "source": "TSA",
-            "entries": [
-                {
-                    "type": "entries",
-                    "name": "Desert",
-                    "entries": [
-                        "To hunt or avoid creatures buried in the sand, Avenger of Grace has endowed you with a vibration-sensitive tail. You gain a sense of vibration with a radius of 15 feet. Also, you are adapted to hot climates."
-                    ]
-                },
-            ]
+            {
+                "name": "desert terloyt",
+                "source": "TSA",
+                "entries": [
+                    {
+                        "type": "entries",
+                        "name": "Desert",
+                        "entries": [
+                            "To hunt or avoid creatures buried in the sand, Avenger of Grace has endowed you with a vibration-sensitive tail. You gain a sense of vibration with a radius of 15 feet. Also, you are adapted to hot climates."
+                        ]
+                    },
+                ]
     
             
-        },
-        {
-            "name": "tundra terloyt",
-            "source": "TSA",
-            "entries": [
-                {
-                    "type": "entries",
-                    "name": "Tundra",
-                    "entries": [
-                        "You can use your big, fluffy tail to cover your tracks. You and your group (if you go last) cannot be tracked by footprints on the ground. Also, you are covered with thick white fur, which makes you adapted to cold climates."
-                    ]
-                },
-            ]
+            },
+            {
+                "name": "tundra terloyt",
+                "source": "TSA",
+                "entries": [
+                    {
+                        "type": "entries",
+                        "name": "Tundra",
+                        "entries": [
+                            "You can use your big, fluffy tail to cover your tracks. You and your group (if you go last) cannot be tracked by footprints on the ground. Also, you are covered with thick white fur, which makes you adapted to cold climates."
+                        ]
+                    },
+                ]
     
             
-        },
-        {
-            "name": "shore terloyt",
-            "source": "TSA",
-            "entries": [
-                {
-                    "type": "entries",
-                    "name": "Shore",
-                    "entries": [
-                        "you instinctively hold your breath when in danger and can hold it for up to 1 hour. Your strong tail with seal-like fins gives you a swimming speed of 40 feet."
-                    ]
-                },
-            ]
+            },
+            {
+                "name": "shore terloyt",
+                "source": "TSA",
+                "entries": [
+                    {
+                        "type": "entries",
+                        "name": "Shore",
+                        "entries": [
+                            "you instinctively hold your breath when in danger and can hold it for up to 1 hour. Your strong tail with seal-like fins gives you a swimming speed of 40 feet."
+                        ]
+                    },
+                ]
     
             
-        }
-    ]
+            }
+        ]
 
-],
+    ],
+
+    }
