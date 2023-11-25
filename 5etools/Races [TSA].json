@@ -3,25 +3,22 @@
 	"_meta": {
 		"sources": [
 			{
-				"json": "SaurianRace",
-				"abbreviation": "SaurianRace",
-				"full": "Saurian Race",
+				"json": "TSARaces",
+				"abbreviation": "TSARaces",
+				"full": "The Second Age Races",
 				"authors": [
-					"Benjamin Huffman",
-					"Sterling Vermin Adventuring Co."
+					"Ikar Makarov",
+					"and Co"
 				],
 				"convertedBy": [
 					"p4535992"
 				],
 				"version": "2.0",
 				"color": "a39853",
-				"url": "https://www.dmsguild.com/product/203521/Saurian-an-Original-Race-for-DD-5e",
+				"url": "https://lake-storm-507.notion.site/9bb19ae621184938acf919c491bbb46d",
 				"targetSchema": "1.7.0"
 			}
 		],
-		"optionalFeatureTypes": {
-			"RACE:SAU": "Race Saurian"
-		},
 		"dateAdded": 1659384262,
 		"dateLastModified": 1690141042,
 		"_dateLastModifiedHash": "60908e541f"
@@ -30,7 +27,6 @@
         {
             "name": "Terloyt",
             "source": "TSA",
-            "page": "0",
             "ability": [{
                 "choose": {
                     "weighted": {
@@ -52,7 +48,7 @@
             "languageProficiencies": [
                 {
                     "common": true,
-                    "nature": true,
+                    "nature": true
                 }
             ],
 
@@ -162,7 +158,7 @@
                                     "entries": [
                                         "You have advantage on Wisdom (Perception) rolls that rely on sight."
                                     ]
-                                },
+                                }
 								
 							    ]
 						    }
@@ -187,7 +183,7 @@
                                     "entries": [
                                         "You have advantage on Wisdom (Perception) rolls that rely on hearing."
                                     ]
-                                },
+                                }
 								
 							    ]
 						    }
@@ -199,82 +195,90 @@
                             {
 							    "type": "list",
 							    "items": [
-								    "You may choose any of the shapes. To change shape during combat, you must move at least 10 feet to a shadow or light source.",
+								    "You may choose any of the shapes. To change shape during combat, you must move at least 10 feet to a shadow or light source."
 							    ]
 						    }
                         ]
-                    },
+                    }
 
                     ]
-                },
+                }
             
-            ],
+            ]
 
 
-        },
-
-        "subraces": [
-            {
-                "name": "forest/mountain terloyt",
-                "source": "TSA",
-                "entries": [
-                    {
-                        "type": "entries",
-                        "name": "Forest and mountains",
-                        "entries": [
-                            "Your long and tenacious tail allows you to move with unprecedented agility. You gain a climbing speed equal to your movement speed, and you cannot be slowed by non-magical difficult terrain."
-                        ]
-                    },
-                ]
-            
-            },
-            {
-                "name": "desert terloyt",
-                "source": "TSA",
-                "entries": [
-                    {
-                        "type": "entries",
-                        "name": "Desert",
-                        "entries": [
-                            "To hunt or avoid creatures buried in the sand, Avenger of Grace has endowed you with a vibration-sensitive tail. You gain a sense of vibration with a radius of 15 feet. Also, you are adapted to hot climates."
-                        ]
-                    },
-                ]
-    
-            
-            },
-            {
-                "name": "tundra terloyt",
-                "source": "TSA",
-                "entries": [
-                    {
-                        "type": "entries",
-                        "name": "Tundra",
-                        "entries": [
-                            "You can use your big, fluffy tail to cover your tracks. You and your group (if you go last) cannot be tracked by footprints on the ground. Also, you are covered with thick white fur, which makes you adapted to cold climates."
-                        ]
-                    },
-                ]
-    
-            
-            },
-            {
-                "name": "shore terloyt",
-                "source": "TSA",
-                "entries": [
-                    {
-                        "type": "entries",
-                        "name": "Shore",
-                        "entries": [
-                            "you instinctively hold your breath when in danger and can hold it for up to 1 hour. Your strong tail with seal-like fins gives you a swimming speed of 40 feet."
-                        ]
-                    },
-                ]
-    
-            
-            }
-        ]
-
+        }
     ],
 
-    }
+    "subrace": [
+        {
+            "name": "forest/mountain terloyt",
+            "raceName": "Terloyt",
+            "raceSource": "TSA races",
+            "source": "TSA",
+            "entries": [
+                {
+                    "type": "entries",
+                    "name": "Forest and mountains",
+                    "entries": [
+                        "Your long and tenacious tail allows you to move with unprecedented agility. You gain a climbing speed equal to your movement speed, and you cannot be slowed by non-magical difficult terrain."
+                    ]
+                }
+            ]
+        
+        },
+        {
+            "name": "desert terloyt",
+            "raceName": "Terloyt",
+            "raceSource": "TSA races",
+            "source": "TSA",
+            "entries": [
+                {
+                    "type": "entries",
+                    "name": "Desert",
+                    "entries": [
+                        "To hunt or avoid creatures buried in the sand, Avenger of Grace has endowed you with a vibration-sensitive tail. You gain a sense of vibration with a radius of 15 feet. Also, you are adapted to hot climates."
+                    ]
+                }
+            ]
+
+        
+        },
+        {
+            "name": "tundra terloyt",
+            "raceName": "Terloyt",
+            "raceSource": "TSA races",
+            "source": "TSA",
+            "entries": [
+                {
+                    "type": "entries",
+                    "name": "Tundra",
+                    "entries": [
+                        "You can use your big, fluffy tail to cover your tracks. You and your group (if you go last) cannot be tracked by footprints on the ground. Also, you are covered with thick white fur, which makes you adapted to cold climates."
+                    ]
+                }
+            ]
+
+        
+        },
+        {
+            "name": "shore terloyt",
+            "raceName": "Terloyt",
+            "raceSource": "TSA races",
+            "source": "TSA",
+            "entries": [
+                {
+                    "type": "entries",
+                    "name": "Shore",
+                    "entries": [
+                        "you instinctively hold your breath when in danger and can hold it for up to 1 hour. Your strong tail with seal-like fins gives you a swimming speed of 40 feet."
+                    ]
+                }
+            ]
+
+        
+        }
+    ]
+
+            
+            }
