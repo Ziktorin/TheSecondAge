@@ -20,7 +20,7 @@ RaceList["forest terloyt"] = {
     sortname : "Terloyt, Forest/Mountain",
     source : [["TSA", 0]],
     plural : "Terloyts",
-      age : "Children who get lost in nature sometimes become terloyts. You maintain this physical age throughout your life. The lifespan of terloyts is unknown.",
+    age : "Children who get lost in nature sometimes become terloyts. You maintain this physical age throughout your life. The lifespan of terloyts is unknown.",
     size : 4,
     speed : {
       walk : { spd : 30, enc : 20 },
@@ -504,6 +504,7 @@ RaceList["pokrov"] = {
 	name : "Pokrov",
 	source : [["TSA", 0]],
 	plural : "Pokrovy",
+	age : "Pokrovy have no age, but usually they last no longer than 10 years, or until they complete the task of the Death Sacrificer.",
 	size : [3],
 	speed : {
 		walk : { spd : 30, enc : 20 }
