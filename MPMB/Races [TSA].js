@@ -537,3 +537,191 @@ RaceList["pokrov"] = {
 		firstCol : 'checkedbox'
 	}
 };
+
+// >>>>>>>>>>>>>>>> //
+// >>>> Weaver >>>> //
+// >>>>>>>>>>>>>>>> //
+
+RaceList["weaver"] = {
+	regExpSearch : /weaver/i,
+	name : "Weaver",
+	source : [["TSA", 0]],
+	plural : "Weavers",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	skillstxt : "Choose two from Deception, Intimidation, Insight, and Persuasion",
+	languageProfs : ["Common", "Weaver Sign Language", 1],
+	scorestxt : "+2/+1 to two different ability scores of my choice",
+	scores : [0, 0, 0, 0, 0, 0],
+	trait : "Weaver (+2/+1 to two different ability scores of my choice)\nShapechanger: As an action, I can change my appearance and voice to or from a humanoid-shaped form I have seen, not changing my equipment. I determine the specifics of the form like hair length, eye color, and sex. I can adjust my height and weight, but not so much that my size changes. I revert back when I die. I can make myself appear as a member of another race, though none of my game statistics change.\nLucky: If you roll a 1 on an attack roll, ability check, or saving throw, you may reroll the die and must use the new result, even if it is a 1.",
+	action : [["action", "Shapechanger"]]
+};
+
+// >>>>>>>>>>>>>>>> //
+// >>>> Allote >>>> //
+// >>>>>>>>>>>>>>>> //
+
+RaceList["beasthide allote"] = {
+	regExpSearch : /^.*(?=.*allote)(?=.*beast)(?=.*hide).*$/i,
+	name : "Beasthide allote",
+	sortname : "Allote, Beasthide",
+	source : [["TSA", 0]],
+	plural : "Beasthide allote",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	languageProfs : ["Common", "Moon"],
+	vision : [["Darkvision", 60]],
+	skills : ["Athletics"],
+	dmgres : [["Bludgeoning", "Bludgeon. (shifted)"], ["Slashing", "Slash. (shifted)"], ["Piercing", "Piercing. (shifted)"]],
+	age : " reach young adulthood at age 10 and rarely live over 70",
+	height : " range from under 5 to almost 6 feet tall (4'6\" + 2d8\")",
+	weight : " weigh around 135 lb (90 + 2d8 \xD7 2d4 lb)",
+	heightMetric : " range from under 1,5 to 1,8 metres tall (4'6\" + 5d8 cm)",
+	weightMetric : " weigh around 65 kg (40 + 5d8 \xD7 4d4 / 10 kg)",
+	scores : [0, 0, 0, 0, 0, 0],
+	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Constitution",
+	trait : "Beasthide Shifter (+2 to any ability score and +1 to any ability score, one must be Constitution)\nShifting (see notes) ",
+	toNotesPage : [{
+        name : "Shifting",
+        note : "\nAs a bonus action once per short rest, I can assume a more bestial appearance.\nThis transformation lasts for 1 minute, until I die, or until I revert back as a bonus action.\nWhen I shift, I gain temporary HP equal to 1d6 + my level + my Constitution modifier (minimum 1 temporary hit point) and gain resistances to bludgeoning, piercing, slashing damage from non-magical attacks, except those inflicted by silver-plated weapons.\nWhile transformed like this, I have a +1 bonus to AC.",
+        page3notes : true
+    }],
+	features : {
+		"shift" : {
+			name : "Shift",
+			minlevel : 1,
+			usages : 1,
+			recovery : "short rest",
+			action : ["bonus action", " (start/end)"],
+			additional : levels.map(function (n) { return "1d6 + " + n + " + Con mod temp HP"; })
+		}
+	}
+};
+RaceList["longtooth allote"] = {
+	regExpSearch : /^.*(?=.*allote)(?=.*long)(?=.*tooth).*$/i,
+	name : "Longtooth allote",
+	sortname : "Allote, Longtooth",
+	source : [["TSA", 0]],
+	plural : "Longtooth allote",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	languageProfs : ["Common", "Moon"],
+	dmgres : [["Bludgeoning", "Bludgeon. (shifted)"], ["Slashing", "Slash. (shifted)"], ["Piercing", "Piercing. (shifted)"]],
+	weaponOptions : {
+		baseWeapon : "unarmed strike",
+		regExpSearch : /^(?=.*fangs?)(?=.*long)(?=.*(tooth|teeth)).*$/i,
+		name : "Longtooth Fangs",
+		source : [["E:RLW", 34]],
+		damage : [1, 6, "piercing"],
+		description : "Only shifted; One attack as bonus action"
+	},
+	weaponsAdd : ["Longtooth Fangs"],
+	vision : [["Darkvision", 60]],
+	skills : ["Intimidation"],
+	age : " reach young adulthood at age 10 and rarely live over 70",
+	height : " range from under 5 to almost 6 feet tall (4'6\" + 2d8\")",
+	weight : " weigh around 135 lb (90 + 2d8 \xD7 2d4 lb)",
+	heightMetric : " range from under 1,5 to 1,8 metres tall (4'6\" + 5d8 cm)",
+	weightMetric : " weigh around 65 kg (40 + 5d8 \xD7 4d4 / 10 kg)",
+	scores : [0, 0, 0, 0, 0, 0],
+	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Constitution",
+	trait : "Longtooth Shifter (+2 to any ability score and +1 to any ability score, one must be Constitution)\nShifting (see notes)",
+	toNotesPage : [{
+        name : "Shifting",
+        note : "\nAs a bonus action once per short rest, I can assume a more bestial appearance.\nThis transformation lasts for 1 minute, until I die, or until I revert back as a bonus action.\nWhen I shift, I gain temporary HP equal to my level + my Constitution modifier (minimum 1 temporary hit point) and gain resistances to bludgeoning, piercing, slashing damage from non-magical attacks, except those inflicted by silver-plated weapons.\nWhile transformed like this, I use my elongated fangs to make unarmed strikes, dealing 1d6 piercing damage. As a bonus action, I can make one attack with my fangs.",
+        page3notes : true
+    }],
+	action : [['bonus action', 'Longtooth Fangs attack (shifted)']],
+	features : {
+		"shift" : {
+			name : "Shift",
+			minlevel : 1,
+			usages : 1,
+			recovery : "short rest",
+			action : ["bonus action", " (start/end)"],
+			additional : levels.map(function (n) { return n + " + Con mod temp HP"; })
+		}
+	}
+};
+RaceList["swiftstride allote"] = {
+	regExpSearch : /^.*(?=.*allote)(?=.*swift)(?=.*stride).*$/i,
+	name : "Swiftstride allote",
+	sortname : "Allote, Swiftstride",
+	source : [["TSA", 0]],
+	plural : "Swiftstride allote",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	languageProfs : ["Common", "Moon"],
+	dmgres : [["Bludgeoning", "Bludgeon. (shifted)"], ["Slashing", "Slash. (shifted)"], ["Piercing", "Piercing. (shifted)"]],
+	vision : [["Darkvision", 60]],
+	skills : ["Acrobatics"],
+	age : " reach young adulthood at age 10 and rarely live over 70",
+	height : " range from under 5 to almost 6 feet tall (4'6\" + 2d8\")",
+	weight : " weigh around 135 lb (90 + 2d8 \xD7 2d4 lb)",
+	heightMetric : " range from under 1,5 to 1,8 metres tall (4'6\" + 5d8 cm)",
+	weightMetric : " weigh around 65 kg (40 + 5d8 \xD7 4d4 / 10 kg)",
+	scores : [0, 0, 0, 0, 0, 0],
+	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Constitution",
+	trait : "Swiftstride Shifter (+2 to any ability score and +1 to any ability score, one must be Constitution)\nShifting (see notes)",
+	toNotesPage : [{
+        name : "Shifting",
+        note : "\nAs a bonus action once per short rest, I can assume a more bestial appearance.\nThis transformation lasts for 1 minute, until I die, or until I revert back as a bonus action.\nWhen I shift, I gain temporary HP equal to my level + my Con" + (typePF ? "stitution modifier (minimum 1 temporary hit point" : " mod (minimum 1 temp HP") + ") and gain resistances to bludgeoning, piercing, slashing damage from non-magical attacks, except those inflicted by silver-plated weapons.\nWhile transformed like this, my walking speed increases with 10 ft.\nAs a reaction when an enemy ends its turn within 5 ft of me while I'm shifted, I can move 10 ft without provoking opportunity attacks.",
+        page3notes : true
+    }],
+	action : [['reaction', 'Stride (shifted)']],
+	features : {
+		"shift" : {
+			name : "Shift",
+			minlevel : 1,
+			usages : 1,
+			recovery : "short rest",
+			action : ["bonus action", " (start/end)"],
+			additional : levels.map(function (n) { return n + " + Con mod temp HP"; })
+		}
+	}
+};
+RaceList["wildhunt allote"] = {
+	regExpSearch : /^.*(?=.*allote)(?=.*wild)(?=.*hunt).*$/i,
+	name : "Wildhunt allote",
+	sortname : "Allote, Wildhunt",
+	source : [["TSA", 0]],
+	plural : "Wildhunt allote",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	languageProfs : ["Common", "Moon"],
+	dmgres : [["Bludgeoning", "Bludgeon. (shifted)"], ["Slashing", "Slash. (shifted)"], ["Piercing", "Piercing. (shifted)"]],
+	vision : [["Darkvision", 60]],
+	skills : ["Survival"],
+	age : " reach young adulthood at age 10 and rarely live over 70",
+	height : " range from under 5 to almost 6 feet tall (4'6\" + 2d8\")",
+	weight : " weigh around 135 lb (90 + 2d8 \xD7 2d4 lb)",
+	heightMetric : " range from under 1,5 to 1,8 metres tall (4'6\" + 5d8 cm)",
+	weightMetric : " weigh around 65 kg (40 + 5d8 \xD7 4d4 / 10 kg)",
+	scores : [0, 0, 0, 0, 0, 0],
+	trait : "Wildhunt Shifter (+2 to any ability score and +1 to any ability score, one must be Constitution)\nShifting (see notes)",
+	toNotesPage : [{
+        name : "Shifting",
+        note : "\nAs a bonus action once per short rest, I can assume a more bestial appearance.\nThis transformation lasts for 1 minute, until I die, or until I revert back as a bonus action.\nWhen I shift, I gain temporary HP equal to my level + my Constitution modifier (minimum 1 temporary hit point) and gain resistances to bludgeoning, piercing, slashing damage from non-magical attacks, except those inflicted by silver-plated weapons.\nWhile transformed like this, I have advantage on Wisdom checks and no creature within 30 ft can make an attack roll with advantage against me, unless I'm incapacitated.",
+        page3notes : true
+    }],
+	features : {
+		"shift" : {
+			name : "Shift",
+			minlevel : 1,
+			usages : 1,
+			recovery : "short rest",
+			action : ["bonus action", " (start/end)"],
+			additional : levels.map(function (n) { return n + " + Con mod temp HP"; })
+		}
+	}
+};
