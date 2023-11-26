@@ -227,6 +227,7 @@ RaceList["hinammet"] = {
 	heightMetric : " range from barely 1,5 to well over 1,8 metres tall (145 + 5d10 cm)",
 	weightMetric : " weigh around 75 kg (50 + 5d10 \xD7 4d4 / 10 kg)",
 	scores : [0, 0, 0, 0, 0, 0],
+	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Strength",
 	trait : "Hinammet (+2 to any ability score and +1 to any ability score, one must be Strength)\n\nCelestial Legacy:\n   I know the Light cantrip.\n   Once I reach 3rd level, I can cast the Lesser Restoration spell once per long rest.\n   Once I reach 5th level, I can cast the Daylight spell once per long rest.\n   Charisma is my spellcasting ability for these spells.",
 	spellcastingAbility : 6,
 	spellcastingBonus : {
@@ -284,6 +285,7 @@ RaceList["fallen hinammet"] = {
 	heightMetric : " range from barely 1,5 to well over 1,8 metres tall (145 + 5d10 cm)",
 	weightMetric : " weigh around 75 kg (50 + 5d10 \xD7 4d4 / 10 kg)",
 	scores : [0, 0, 0, 0, 0, 0],
+	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Strength",
 	trait : "Fallen Hinammet (+2 to any ability score and +1 to any ability score, one must be Strength)" + (typePF ? "\n" : " ") + "Light Bearer: I know the Light cantrip.\nHealing Hands: As an action, once per long rest, I can touch to heal for my level in HP.\nNecrotic Shroud: Once per long rest when I'm 3rd level, I can use an action to transform, causing all within 10 ft of me to make a Cha" + (typePF ? "" : "risma") + " saving throw (DC 8 + Cha mod + Prof Bonus) or be frightened of me until the end of my next turn. This lasts for 1 minute or until I end it as a bonus action. Once on my turn I can have one of my attacks or spells deals my level in extra necrotic damage to one target.",
 	abilitySave : 6,
 	spellcastingAbility : 6,
@@ -331,6 +333,7 @@ RaceList["protector hinammet"] = {
 	heightMetric : " range from barely 1,5 to well over 1,8 metres tall (145 + 5d10 cm)",
 	weightMetric : " weigh around 75 kg (50 + 5d10 \xD7 4d4 / 10 kg)",
 	scores : [0, 0, 0, 0, 0, 0],
+	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Strength",
 	trait : "Protector Hinammet (+2 to any ability score and +1 to any ability score, one must be Strength)\nLight Bearer: I know the Light cantrip.\nHealing Hands: As an action, once per long rest, I can touch to heal for my level in HP.\nRadiant Soul: Once per long rest when I'm 3rd level, I can use an action to transform, gaining glimmer in my eyes and two incorporeal wings. For 1 minute or until I end it as a bonus action, I have 30 feet fly speed; once on my turn I can have one of my attacks or spells deal my level in extra radiant damage to one target.",
 	spellcastingAbility : 6,
 	spellcastingBonus : {
@@ -376,7 +379,8 @@ RaceList["scourge hinammet"] = {
 	weight : " weigh around 165 lb (110 + 2d10 \xD7 2d4 lb)",
 	heightMetric : " range from barely 1,5 to well over 1,8 metres tall (145 + 5d10 cm)",
 	weightMetric : " weigh around 75 kg (50 + 5d10 \xD7 4d4 / 10 kg)",
-	scores : [0, 0, 1, 0, 0, 2],
+	scores : [0, 0, 0, 0, 0, 0],
+	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Strength",
 	trait : "Scourge Hinammet (+2 to any ability score and +1 to any ability score, one must be Strength)" + (typePF ? "\n" : " ") + "Light Bearer: I know the Light cantrip.\nHealing Hands: As an action, once per long rest, I can touch to heal for my level in HP.\nRadiant Consumption: Once per long rest when I'm 3rd level, I can use an action to radiate bright light in 10-ft radius and dim light for another 10-ft, for 1 minute or until I end it as a bonus action. Once on my turn my attack or spell deals my level in extra radiant damage to one target, and at the end of my turns all creatures within 10 ft of me, including myself, take half my level in radiant damage.",
 	spellcastingAbility : 6,
 	spellcastingBonus : {
@@ -435,12 +439,14 @@ RaceList["lingre"] = {
 	source : [["TSA", 0]],
 	plural : "Lingres",
 	size : [3, 4],
+	vision : [["Darkvision", 60]],
 	speed : {
 		walk : { spd : 35, enc : 25 }
 	},
 	languageProfs : ["Common", "Ordlag"],
 	skillstxt: "Choose any two skills",
-	scoresGeneric : true,
+	scores : [0, 0, 0, 0, 0, 0],
+	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Intelligence",
 	trait : "Lingre" + (typePF ? "\n " : "\t") +
 	"\u2022 Lingre (+2 to any ability score and +1 to any ability score, one must be Intelligence)" +
 	"\n \u2022 Deathless Nature: I don't need to breathe." +
@@ -459,7 +465,6 @@ RaceList["lingre"] = {
         note : "\nYou know the Sapping Sting cantrip. The basic spellcasting ability for it is Intelligence. For you, this cantrip has the following qualities: \n   \u2022Casting time: 1 action\n   \u2022Range: 30 ft.\n   \u2022Components: V,S\n   \u2022Duration: Instantaneous\nYou drain the life force of one visible creature within range. The target must succeed on a Constitution saving throw or take 1d6 necrotic damage and fall prone.\nWhen you attack with this cantrip and the target is a creature that is not a Construct or Undead of Medium size or larger, you can empower yourself in one of the following ways of your choice:\n   \u2022You regain hit points equal to the damage you dealt with the cantrip. If the target creature dies from this damage, then you're satiated for the day.\n   \u2022You gain a bonus to the next ability check or attack roll you make. The bonus is equal to the damage you dealt with the spell. The bonus lasts until the next use of this ability.\nYou can empower yourself with this cantrip a number of times equal to your proficiency bonus, and you regain all spent uses when you finish a long rest.\nThis spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
         page3notes : true
     }],
-	vision : [["Darkvision", 60]],
 	extraLimitedFeatures : [{
 		name : "Life Siphon",
 		usages : "Proficiency bonus per ",
@@ -475,3 +480,60 @@ RaceList["lingre"] = {
 	}
 };
 
+// >>>>>>>>>>>>>>>> //
+// >>>> Human >>>>> //
+// >>>>>>>>>>>>>>>> //
+
+AddRacialVariant("human", "second age", {
+	regExpSearch : /second age/i,
+	source : [["TSA", 0]],
+	skillstxt : "Choose any one skill",
+	scorestxt : "+2/+1 to two different ability scores of my choice",
+	scores : [0, 0, 0, 0, -1, 0],
+	trait : "Human (+2/+1 to two different ability scores of my choice)\n\nSkills: I gain proficiency in one skill of my choice.\n\nFeat: I gain one feat of my choice.\n\nConsuming Ambition: The gods have given you an insatiable desire for something more. Spiritual values are the first thing you sacrifice on the way to your ambition. Your Wisdom is reduced by 1.",
+	eval : function() { AddString('Feat Note 1', 'Human bonus feat', '; '); },
+	removeeval : function() { RemoveString('Feat Note 1', 'Human bonus feat'); }
+});
+
+// >>>>>>>>>>>>>>>> //
+// >>>> Pokrov >>>> //
+// >>>>>>>>>>>>>>>> //
+
+RaceList["pokrov"] = {
+	regExpSearch : /pokrov/i,
+	name : "Pokrov",
+	source : [["TSA", 0]],
+	plural : "Pokrovy",
+	size : [3],
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	vision : [["Darkvision", 60]],
+	languageProfs : ["Common", "Dead", 1],
+	scores : [0, 0, 0, 0, 0, 0],
+    scorestxt : "+2 to any ability score and +1 to any ability score, one must be Wisdom",
+	trait : "Pokrov" + (typePF ? "\n " : "\t") +
+	"\u2022 Pokrov (+2 to any ability score and +1 to any ability score, one must be Wisdom)" +
+	"\n \u2022 Undead Nature: You are undead. You don't need to eat, drink, breathe or sleep. You have resistance to necrotic and poison damage. You have advantage on saving throws against poison." +
+	"\n \u2022 Blessed Silence: You can only speak in whispers. Your speech cannot be heard more than 15 feet away." +
+	"\n \u2022 Death's Will (see notes)" +
+	"\n \u2022 Eldritch Acolyte (see notes)",
+	dmgres : ["Poison", "Necrotic"],
+	savetxt : {adv_vs : ["poisoned"]},
+	toNotesPage : [{
+        name : "Death's Will",
+        note : "\nYou emit an aura over a 30-foot radius. It disappears when you die. When any humanoid or creature larger than Small dies within the aura's area of effect or as a result of your attack or spell, roll 1d20. If the roll is 10 or more, the creature is stabilized. You can regain one hit die. If the roll is less than 10, the creature dies. You can spend your hit die + mod. Constitution and restore this number of hit points.\nThe undead always die, but you can choose the effect yourself. You can only regain or spend a hit die once per round.\nThis trait can only affect a creature once every 24 hours. It also does not affect Constructs.\nThe number of hit dice affected by this trait increases by 1 when you reach 5th level (2 dice), 11th level (3 dice), and 17th level (4 dice).\n",
+        page3notes : true
+    },
+	{
+        name : "Eldritch Acolyte",
+        note : "\nYou know the Ceremony spell and always remember it. It does not require any material components for you. You cannot create holy water with this spell. You regain hit dice in an amount determined by your Death's Will ability.\n",
+        page3notes : true
+    }],
+	spellcastingBonus : {
+		name : "Ceremony",
+		spells : ["ceremony"],
+		selection : ["ceremony"],
+		firstCol : 'checkedbox'
+	}
+};
