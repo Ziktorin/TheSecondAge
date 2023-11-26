@@ -377,7 +377,7 @@ RaceList["scourge hinammet"] = {
 	heightMetric : " range from barely 1,5 to well over 1,8 metres tall (145 + 5d10 cm)",
 	weightMetric : " weigh around 75 kg (50 + 5d10 \xD7 4d4 / 10 kg)",
 	scores : [0, 0, 1, 0, 0, 2],
-	trait : "Scourge Hinammet (+1 Constitution, +2 Charisma)" + (typePF ? "\n" : " ") + "Light Bearer: I know the Light cantrip.\nHealing Hands: As an action, once per long rest, I can touch to heal for my level in HP.\nRadiant Consumption: Once per long rest when I'm 3rd level, I can use an action to radiate bright light in 10-ft radius and dim light for another 10-ft, for 1 minute or until I end it as a bonus action. Once on my turn my attack or spell deals my level in extra radiant damage to one target, and at the end of my turns all creatures within 10 ft of me, including myself, take half my level in radiant damage.",
+	trait : "Scourge Hinammet (+2 to any ability score and +1 to any ability score, one must be Strength)" + (typePF ? "\n" : " ") + "Light Bearer: I know the Light cantrip.\nHealing Hands: As an action, once per long rest, I can touch to heal for my level in HP.\nRadiant Consumption: Once per long rest when I'm 3rd level, I can use an action to radiate bright light in 10-ft radius and dim light for another 10-ft, for 1 minute or until I end it as a bonus action. Once on my turn my attack or spell deals my level in extra radiant damage to one target, and at the end of my turns all creatures within 10 ft of me, including myself, take half my level in radiant damage.",
 	spellcastingAbility : 6,
 	spellcastingBonus : {
 		name : "Light Bearer",
@@ -407,3 +407,71 @@ RaceList["scourge hinammet"] = {
 		}
 	}
 };
+
+// >>>>>>>>>>>>>>>> //
+// >>>> Lingre >>>> //
+// >>>>>>>>>>>>>>>> //
+
+SpellsList["life siphon"] = {
+	name : "Sapping Sting (Lingre)",
+	regExpSearch : /sapping sting \(lingre\)/i,
+	source: ["TSA", 0],
+	classes : [],
+	level : 0,
+	school : "Necro",
+	time : "1 a",
+	range : "30 ft.",
+	components : "V,S",
+	duration : "Instantaneous",
+	save : "Con",
+	description : "1 creature that I can see save or 1d6 Necrotic dmg and fall prone; heal for dmg or add dmg to next atk roll or check; +1d6 at CL 5, 11, and 17",
+	descriptionCantripDie : "1 creature I can see save save or `CD`d6 Necro dmg; heal for dmg or add dmg to next atk roll or check",
+	descriptionFull : "You drain the life force of one visible creature within range. The target must succeed on a Constitution saving throw or take 1d6 necrotic damage and fall prone.\nWhen you attack with this cantrip and the target is a creature that is not a Construct or Undead of Medium size or larger, you can empower yourself in one of the following ways of your choice:\n\u2022You regain hit points equal to the damage you dealt with the cantrip. If the target creature dies from this damage, then you're satiated for the day.\n\u2022You gain a bonus to the next ability check or attack roll you make. The bonus is equal to the damage you dealt with the spell. The bonus lasts until the next use of this ability.\nYou can empower yourself with this cantrip a number of times equal to your proficiency bonus, and you regain all spent uses when you finish a long rest.\nThis spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
+}
+
+RaceList["lingre"] = {
+	regExpSearch : /lingre/i,
+	name : "Lingre",
+	source : [["TSA", 0]],
+	plural : "Lingres",
+	size : [3, 4],
+	speed : {
+		walk : { spd : 35, enc : 25 }
+	},
+	languageProfs : ["Common", "Ordlag"],
+	skillstxt: "Choose any two skills",
+	scoresGeneric : true,
+	trait : "Lingre" + (typePF ? "\n " : "\t") +
+	"\u2022 Lingre (+2 to any ability score and +1 to any ability score, one must be Intelligence)" +
+	"\n \u2022 Deathless Nature: I don't need to breathe." +
+	"\n \u2022 Spider Climb: Climbing speed equal to walking speed. At 3rd level, I can move up, down, and across vertical surfaces and upside down along ceilings, while leaving my hands free." +
+	"\n \u2022 Life Siphon (see notes page)" +
+	"\n \u2022 Energy Eater: Only the restoration of hit points from using the Life Siphon feature, or healing gems, can saturate you.",
+	features : {
+		"spider climb" : { // So it doesn't interfere with inherited speeds by useFromPreviousRace
+			name : "Spider Climb",
+			minlevel : 1,
+			speed : { climb : { spd : "walk", enc : "walk" } }
+		}
+	},
+	toNotesPage : [{
+        name : "Life Siphon",
+        note : "\nYou know the Sapping Sting cantrip. The basic spellcasting ability for it is Intelligence. For you, this cantrip has the following qualities: \n   \u2022Casting time: 1 action\n   \u2022Range: 30 ft.\n   \u2022Components: V,S\n   \u2022Duration: Instantaneous\nYou drain the life force of one visible creature within range. The target must succeed on a Constitution saving throw or take 1d6 necrotic damage and fall prone.\nWhen you attack with this cantrip and the target is a creature that is not a Construct or Undead of Medium size or larger, you can empower yourself in one of the following ways of your choice:\n   \u2022You regain hit points equal to the damage you dealt with the cantrip. If the target creature dies from this damage, then you're satiated for the day.\n   \u2022You gain a bonus to the next ability check or attack roll you make. The bonus is equal to the damage you dealt with the spell. The bonus lasts until the next use of this ability.\nYou can empower yourself with this cantrip a number of times equal to your proficiency bonus, and you regain all spent uses when you finish a long rest.\nThis spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+        page3notes : true
+    }],
+	vision : [["Darkvision", 60]],
+	extraLimitedFeatures : [{
+		name : "Life Siphon",
+		usages : "Proficiency bonus per ",
+		usagescalc : "event.value = How('Proficiency Bonus')",
+		recovery: "long rest"
+	}],
+	spellcastingAbility : 4,
+	spellcastingBonus : {
+		name : "Life Siphon",
+		spells : ["life siphon"],
+		selection : ["life siphon"],
+		firstCol : 'atwill'
+	}
+};
+
