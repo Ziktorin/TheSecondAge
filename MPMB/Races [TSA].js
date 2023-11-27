@@ -15,16 +15,15 @@ SourceList["The Second Age"] = {
 // >>>>>>>>>>>>>>>> //
 
 RaceList["forest terloyt"] = {
-    regExpSearch : /^(?=.*(terloyt))(?=.*\b(forest)?\b).*$/i,
-    name : "Terloyt, Forest",
+    regExpSearch : /^(?=.*(terloyt))(?=.*\bforest?\b).*$/i,
+    name : "Terloyt, Forest/Mountain",
     sortname : "Terloyt, Forest/Mountain",
     source : [["TSA", 0]],
     plural : "Terloyts",
     age : "Children who get lost in nature sometimes become terloyts. You maintain this physical age throughout your life. The lifespan of terloyts is unknown.",
     size : 4,
     speed : {
-      walk : { spd : 30, enc : 20 },
-      climb : { spd : 30, enc : 0 }
+      walk : { spd : 30, enc : 20 }
     },
     languageProfs : ["Common", "Nature"],
     vision : [["Darkvision", 60]],
@@ -32,7 +31,7 @@ RaceList["forest terloyt"] = {
           text: ["Disadv. on saves vs. being charmed, frightened"]
       },
     scores : [0, 0, 0, 0, 0, 0],
-      scorestxt : "+2 to any ability score and +1 to any ability score, one must be Dexterity",
+    scorestxt : "+2 to any ability score and +1 to any ability score, one must be Dexterity",
     trait : [
           "Terloyt (+2 to any ability score and +1 to any ability score, one must be Dexterity).",
           "You are a humanoid. You also count as a fey for any prerequisite or effect that requires you to be a fey.",
@@ -46,20 +45,23 @@ RaceList["forest terloyt"] = {
               name : "Gift of the Avenger of Grace",
               usages : "Proficiency bonus per ",
               recovery : "long rest",
-              usagescalc : "event.value = Number(How('Proficiency Bonus'));"
-          }
-      },
-    toNotesPage : [{
-        name : "Gift of the Avenger of Grace",
-        note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n   \u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.   \n\u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.   \n\u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
-        page3notes : true
-    },
-    {
-        name : "Terloytian Adaptations",
-        note : "\nYour long and prehensile tail allows you to move with unprecedented agility. You gain a climbing speed equal to your movement speed, and you cannot be slowed by non-magical difficult terrain.",
-        page3notes : true
-    }],
-    variants : []
+              usagescalc : "event.value = Number(How('Proficiency Bonus'));",
+			  toNotesPage : [{
+				name : "Gift of the Avenger of Grace",
+				note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n\u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.   \n\u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.   \n\u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
+				page3notes : true
+			}]
+          },
+		  "Terloytian Adaptations (forest)" : {
+			name : "Terloytian Adaptations",
+			toNotesPage : [{
+				name : "Terloytian Adaptations",
+				note : "\nYour long and prehensile tail allows you to move with unprecedented agility. You gain a climbing speed equal to your movement speed, and you cannot be slowed by non-magical difficult terrain.",
+				page3notes : true
+			}],
+			speed : {climb : { spd : 30, enc : 0 }}
+      }
+	}
   };
 
 RaceList["desert terloyt"] = {
@@ -93,20 +95,22 @@ RaceList["desert terloyt"] = {
             name : "Gift of the Avenger of Grace",
             usages : "Proficiency bonus per ",
             recovery : "long rest",
-            usagescalc : "event.value = Number(How('Proficiency Bonus'));"
-        }
-    },
-    toNotesPage : [{
-        name : "Gift of the Avenger of Grace",
-        note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n   \u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
-        page3notes : true
-    },
-    {
-        name : "Terloytian Adaptations",
-        note : "\nTo hunt or avoid creatures buried in the sand, the Avenger of Grace has given you a vibration-sensitive tail. You gain a tremor sense over a 15-foot radius. Also, you are adapted to hot climates.",
-        page3notes : true
-    }],
-	variants : []
+            usagescalc : "event.value = Number(How('Proficiency Bonus'));",
+			toNotesPage : [{
+				name : "Gift of the Avenger of Grace",
+				note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n\u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
+				page3notes : true
+			}]
+        },
+		"Terloytian Adaptations" : {
+			name : "Terloytian Adaptations",
+			toNotesPage : [{
+				name : "Terloytian Adaptations",
+				note : "\nTo hunt or avoid creatures buried in the sand, the Avenger of Grace has given you a vibration-sensitive tail. You gain a tremor sense over a 15-foot radius. Also, you are adapted to hot climates.",
+				page3notes : true
+			}]
+    	},
+	}
 };
 
 
@@ -141,20 +145,22 @@ RaceList["tundra terloyt"] = {
             name : "Gift of the Avenger of Grace",
             usages : "Proficiency bonus per ",
             recovery : "long rest",
-            usagescalc : "event.value = Number(How('Proficiency Bonus'));"
-        }
-    },
-    toNotesPage : [{
-        name : "Gift of the Avenger of Grace",
-        note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n   \u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
-        page3notes : true
-    },
-    {
-        name : "Terloytian Adaptations",
-        note : "\nYou can use your big, fluffy tail to cover your tracks. You and your group (if you go last) cannot be tracked by footprints on the ground. You are also covered in thick white fur, which makes you adapted to cold climates.",
-        page3notes : true
-    }],
-	variants : []
+            usagescalc : "event.value = Number(How('Proficiency Bonus'));",
+			toNotesPage : [{
+				name : "Gift of the Avenger of Grace",
+				note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n\u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
+				page3notes : true
+			}]
+        },
+		"Terloytian Adaptations" : {
+			name : "Terloytian Adaptations",
+			toNotesPage : [{
+				name : "Terloytian Adaptations",
+				note : "\nYou can use your big, fluffy tail to cover your tracks. You and your group (if you go last) cannot be tracked by footprints on the ground. You are also covered in thick white fur, which makes you adapted to cold climates.",
+				page3notes : true
+			}]
+    	}
+	}
 };
 
 RaceList["shore terloyt"] = {
@@ -166,8 +172,7 @@ RaceList["shore terloyt"] = {
     age : "Children who get lost in nature sometimes become terloyts. You maintain this physical age throughout your life. The lifespan of terloyts is unknown.",
 	size : 4,
 	speed : {
-		walk : { spd : 30, enc : 20 },
-		swim : { spd : 40, enc : 0 }
+		walk : { spd : 30, enc : 20 }
 	},
 	languageProfs : ["Common", "Nature"],
 	vision : [["Darkvision", 60]],
@@ -189,20 +194,23 @@ RaceList["shore terloyt"] = {
             name : "Gift of the Avenger of Grace",
             usages : "Proficiency bonus per ",
             recovery : "long rest",
-            usagescalc : "event.value = Number(How('Proficiency Bonus'));"
-        }
-    },
-    toNotesPage : [{
-        name : "Gift of the Avenger of Grace",
-        note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n   \u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
-        page3notes : true
-    },
-    {
-        name : "Terloytian Adaptations",
-        note : "\nYou instinctively hold your breath when in danger and can hold it for 1 hour. Your strong tail with seal-like fins gives you a swimming speed of 40 feet.",
-        page3notes : true
-    }],
-	variants : []
+            usagescalc : "event.value = Number(How('Proficiency Bonus'));",
+			toNotesPage : [{
+				name : "Gift of the Avenger of Grace",
+				note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n\u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
+				page3notes : true
+			}]
+        },
+		"Terloytian Adaptations" : {
+			name : "Terloytian Adaptations",
+			toNotesPage : [{
+				name : "Terloytian Adaptations",
+				note : "\nYou instinctively hold your breath when in danger and can hold it for 1 hour. Your strong tail with seal-like fins gives you a swimming speed of 40 feet.",
+				page3notes : true,
+			}],
+			speed : { swim : { spd : "40", enc : "20" } }
+		}
+    }
 };
 
 // >>>>>>>>>>>>>>>> //
@@ -454,17 +462,19 @@ RaceList["lingre"] = {
 	"\n \u2022 Life Siphon (see notes page)" +
 	"\n \u2022 Energy Eater: Only the restoration of hit points from using the Life Siphon feature, or healing gems, can saturate you.",
 	features : {
-		"spider climb" : { // So it doesn't interfere with inherited speeds by useFromPreviousRace
+		"spider climb" : {
 			name : "Spider Climb",
-			minlevel : 1,
 			speed : { climb : { spd : "walk", enc : "walk" } }
+		},
+		"life siphon" : {
+			name : "Life Siphon",
+			toNotesPage : [{
+				name : "Life Siphon",
+				note : "\nYou know the Sapping Sting cantrip. The basic spellcasting ability for it is Intelligence. For you, this cantrip has the following qualities: \n   \u2022Casting time: 1 action\n   \u2022Range: 30 ft.\n   \u2022Components: V,S\n   \u2022Duration: Instantaneous\nYou drain the life force of one visible creature within range. The target must succeed on a Constitution saving throw or take 1d6 necrotic damage and fall prone.\nWhen you attack with this cantrip and the target is a creature that is not a Construct or Undead of Medium size or larger, you can empower yourself in one of the following ways of your choice:\n   You regain hit points equal to the damage you dealt with the cantrip. If the target creature dies from this damage, then you're satiated for the day.\n   You gain a bonus to the next ability check or attack roll you make. The bonus is equal to the damage you dealt with the spell. The bonus lasts until the next use of this ability.\nYou can empower yourself with this cantrip a number of times equal to your proficiency bonus, and you regain all spent uses when you finish a long rest.\nThis spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+				page3notes : true
+			}]
 		}
 	},
-	toNotesPage : [{
-        name : "Life Siphon",
-        note : "\nYou know the Sapping Sting cantrip. The basic spellcasting ability for it is Intelligence. For you, this cantrip has the following qualities: \n   \u2022Casting time: 1 action\n   \u2022Range: 30 ft.\n   \u2022Components: V,S\n   \u2022Duration: Instantaneous\nYou drain the life force of one visible creature within range. The target must succeed on a Constitution saving throw or take 1d6 necrotic damage and fall prone.\nWhen you attack with this cantrip and the target is a creature that is not a Construct or Undead of Medium size or larger, you can empower yourself in one of the following ways of your choice:\n   \u2022You regain hit points equal to the damage you dealt with the cantrip. If the target creature dies from this damage, then you're satiated for the day.\n   \u2022You gain a bonus to the next ability check or attack roll you make. The bonus is equal to the damage you dealt with the spell. The bonus lasts until the next use of this ability.\nYou can empower yourself with this cantrip a number of times equal to your proficiency bonus, and you regain all spent uses when you finish a long rest.\nThis spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
-        page3notes : true
-    }],
 	extraLimitedFeatures : [{
 		name : "Life Siphon",
 		usages : "Proficiency bonus per ",
@@ -521,16 +531,24 @@ RaceList["pokrov"] = {
 	"\n \u2022 Eldritch Acolyte (see notes)",
 	dmgres : ["Poison", "Necrotic"],
 	savetxt : {adv_vs : ["poisoned"]},
-	toNotesPage : [{
-        name : "Death's Will",
-        note : "\nYou emit an aura over a 30-foot radius. It disappears when you die. When any humanoid or creature larger than Small dies within the aura's area of effect or as a result of your attack or spell, roll 1d20. If the roll is 10 or more, the creature is stabilized. You can regain one hit die. If the roll is less than 10, the creature dies. You can spend your hit die + mod. Constitution and restore this number of hit points.\nThe undead always die, but you can choose the effect yourself. You can only regain or spend a hit die once per round.\nThis trait can only affect a creature once every 24 hours. It also does not affect Constructs.\nThe number of hit dice affected by this trait increases by 1 when you reach 5th level (2 dice), 11th level (3 dice), and 17th level (4 dice).\n",
-        page3notes : true
-    },
-	{
-        name : "Eldritch Acolyte",
-        note : "\nYou know the Ceremony spell and always remember it. It does not require any material components for you. You cannot create holy water with this spell. You regain hit dice in an amount determined by your Death's Will ability.\n",
-        page3notes : true
-    }],
+	features : {
+		"Death's Will" : { 
+			name : "Death's Will",
+			toNotesPage : [{
+				name : "Death's Will",
+				note : "\nYou emit an aura over a 30-foot radius. It disappears when you die. When any humanoid or creature larger than Small dies within the aura's area of effect or as a result of your attack or spell, roll 1d20. If the roll is 10 or more, the creature is stabilized. You can regain one hit die. If the roll is less than 10, the creature dies. You can spend your hit die + mod. Constitution and restore this number of hit points.\nThe undead always die, but you can choose the effect yourself. You can only regain or spend a hit die once per round.\nThis trait can only affect a creature once every 24 hours. It also does not affect Constructs.\nThe number of hit dice affected by this trait increases by 1 when you reach 5th level (2 dice), 11th level (3 dice), and 17th level (4 dice).\n",
+				page3notes : true
+			}]
+		},
+		"Eldritch Acolyte" : { 
+			name : "Eldritch Acolyte",
+			toNotesPage : [{
+				name : "Eldritch Acolyte",
+				note : "\nYou know the Ceremony spell and always remember it. It does not require any material components for you. You cannot create holy water with this spell. You regain hit dice in an amount determined by your Death's Will ability.\n",
+				page3notes : true
+			}]
+		},
+	},
 	spellcastingBonus : {
 		name : "Ceremony",
 		spells : ["ceremony"],
@@ -586,11 +604,6 @@ RaceList["beasthide allote"] = {
 	scores : [0, 0, 0, 0, 0, 0],
 	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Constitution",
 	trait : "Beasthide Shifter (+2 to any ability score and +1 to any ability score, one must be Constitution)\nShifting (see notes) ",
-	toNotesPage : [{
-        name : "Shifting",
-        note : "\nAs a bonus action once per short rest, I can assume a more bestial appearance.\nThis transformation lasts for 1 minute, until I die, or until I revert back as a bonus action.\nWhen I shift, I gain temporary HP equal to 1d6 + my level + my Constitution modifier (minimum 1 temporary hit point) and gain resistances to bludgeoning, piercing, slashing damage from non-magical attacks, except those inflicted by silver-plated weapons.\nWhile transformed like this, I have a +1 bonus to AC.",
-        page3notes : true
-    }],
 	features : {
 		"shift" : {
 			name : "Shift",
@@ -598,7 +611,12 @@ RaceList["beasthide allote"] = {
 			usages : 1,
 			recovery : "short rest",
 			action : ["bonus action", " (start/end)"],
-			additional : levels.map(function (n) { return "1d6 + " + n + " + Con mod temp HP"; })
+			additional : levels.map(function (n) { return "1d6 + " + n + " + Con mod temp HP"; }),
+			toNotesPage : [{
+				name : "Shifting",
+				note : "\nAs a bonus action once per short rest, I can assume a more bestial appearance.\nThis transformation lasts for 1 minute, until I die, or until I revert back as a bonus action.\nWhen I shift, I gain temporary HP equal to 1d6 + my level + my Constitution modifier (minimum 1 temporary hit point) and gain resistances to bludgeoning, piercing, slashing damage from non-magical attacks, except those inflicted by silver-plated weapons.\nWhile transformed like this, I have a +1 bonus to AC.",
+				page3notes : true
+			}]
 		}
 	}
 };
@@ -633,11 +651,6 @@ RaceList["longtooth allote"] = {
 	scores : [0, 0, 0, 0, 0, 0],
 	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Constitution",
 	trait : "Longtooth Shifter (+2 to any ability score and +1 to any ability score, one must be Constitution)\nShifting (see notes)",
-	toNotesPage : [{
-        name : "Shifting",
-        note : "\nAs a bonus action once per short rest, I can assume a more bestial appearance.\nThis transformation lasts for 1 minute, until I die, or until I revert back as a bonus action.\nWhen I shift, I gain temporary HP equal to my level + my Constitution modifier (minimum 1 temporary hit point) and gain resistances to bludgeoning, piercing, slashing damage from non-magical attacks, except those inflicted by silver-plated weapons.\nWhile transformed like this, I use my elongated fangs to make unarmed strikes, dealing 1d6 piercing damage. As a bonus action, I can make one attack with my fangs.",
-        page3notes : true
-    }],
 	action : [['bonus action', 'Longtooth Fangs attack (shifted)']],
 	features : {
 		"shift" : {
@@ -646,7 +659,12 @@ RaceList["longtooth allote"] = {
 			usages : 1,
 			recovery : "short rest",
 			action : ["bonus action", " (start/end)"],
-			additional : levels.map(function (n) { return n + " + Con mod temp HP"; })
+			additional : levels.map(function (n) { return n + " + Con mod temp HP"; }),
+			toNotesPage : [{
+				name : "Shifting",
+				note : "\nAs a bonus action once per short rest, I can assume a more bestial appearance.\nThis transformation lasts for 1 minute, until I die, or until I revert back as a bonus action.\nWhen I shift, I gain temporary HP equal to my level + my Constitution modifier (minimum 1 temporary hit point) and gain resistances to bludgeoning, piercing, slashing damage from non-magical attacks, except those inflicted by silver-plated weapons.\nWhile transformed like this, I use my elongated fangs to make unarmed strikes, dealing 1d6 piercing damage. As a bonus action, I can make one attack with my fangs.",
+				page3notes : true
+			}]
 		}
 	}
 };
@@ -672,11 +690,6 @@ RaceList["swiftstride allote"] = {
 	scores : [0, 0, 0, 0, 0, 0],
 	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Constitution",
 	trait : "Swiftstride Shifter (+2 to any ability score and +1 to any ability score, one must be Constitution)\nShifting (see notes)",
-	toNotesPage : [{
-        name : "Shifting",
-        note : "\nAs a bonus action once per short rest, I can assume a more bestial appearance.\nThis transformation lasts for 1 minute, until I die, or until I revert back as a bonus action.\nWhen I shift, I gain temporary HP equal to my level + my Con" + (typePF ? "stitution modifier (minimum 1 temporary hit point" : " mod (minimum 1 temp HP") + ") and gain resistances to bludgeoning, piercing, slashing damage from non-magical attacks, except those inflicted by silver-plated weapons.\nWhile transformed like this, my walking speed increases with 10 ft.\nAs a reaction when an enemy ends its turn within 5 ft of me while I'm shifted, I can move 10 ft without provoking opportunity attacks.",
-        page3notes : true
-    }],
 	action : [['reaction', 'Stride (shifted)']],
 	features : {
 		"shift" : {
@@ -685,7 +698,12 @@ RaceList["swiftstride allote"] = {
 			usages : 1,
 			recovery : "short rest",
 			action : ["bonus action", " (start/end)"],
-			additional : levels.map(function (n) { return n + " + Con mod temp HP"; })
+			additional : levels.map(function (n) { return n + " + Con mod temp HP"; }),
+			toNotesPage : [{
+				name : "Shifting",
+				note : "\nAs a bonus action once per short rest, I can assume a more bestial appearance.\nThis transformation lasts for 1 minute, until I die, or until I revert back as a bonus action.\nWhen I shift, I gain temporary HP equal to my level + my Con" + (typePF ? "stitution modifier (minimum 1 temporary hit point" : " mod (minimum 1 temp HP") + ") and gain resistances to bludgeoning, piercing, slashing damage from non-magical attacks, except those inflicted by silver-plated weapons.\nWhile transformed like this, my walking speed increases with 10 ft.\nAs a reaction when an enemy ends its turn within 5 ft of me while I'm shifted, I can move 10 ft without provoking opportunity attacks.",
+				page3notes : true
+			}]
 		}
 	}
 };
@@ -710,11 +728,6 @@ RaceList["wildhunt allote"] = {
 	weightMetric : " weigh around 65 kg (40 + 5d8 \xD7 4d4 / 10 kg)",
 	scores : [0, 0, 0, 0, 0, 0],
 	trait : "Wildhunt Shifter (+2 to any ability score and +1 to any ability score, one must be Constitution)\nShifting (see notes)",
-	toNotesPage : [{
-        name : "Shifting",
-        note : "\nAs a bonus action once per short rest, I can assume a more bestial appearance.\nThis transformation lasts for 1 minute, until I die, or until I revert back as a bonus action.\nWhen I shift, I gain temporary HP equal to my level + my Constitution modifier (minimum 1 temporary hit point) and gain resistances to bludgeoning, piercing, slashing damage from non-magical attacks, except those inflicted by silver-plated weapons.\nWhile transformed like this, I have advantage on Wisdom checks and no creature within 30 ft can make an attack roll with advantage against me, unless I'm incapacitated.",
-        page3notes : true
-    }],
 	features : {
 		"shift" : {
 			name : "Shift",
@@ -722,7 +735,111 @@ RaceList["wildhunt allote"] = {
 			usages : 1,
 			recovery : "short rest",
 			action : ["bonus action", " (start/end)"],
-			additional : levels.map(function (n) { return n + " + Con mod temp HP"; })
+			additional : levels.map(function (n) { return n + " + Con mod temp HP"; }),
+			toNotesPage : [{
+				name : "Shifting",
+				note : "\nAs a bonus action once per short rest, I can assume a more bestial appearance.\nThis transformation lasts for 1 minute, until I die, or until I revert back as a bonus action.\nWhen I shift, I gain temporary HP equal to my level + my Constitution modifier (minimum 1 temporary hit point) and gain resistances to bludgeoning, piercing, slashing damage from non-magical attacks, except those inflicted by silver-plated weapons.\nWhile transformed like this, I have advantage on Wisdom checks and no creature within 30 ft can make an attack roll with advantage against me, unless I'm incapacitated.",
+				page3notes : true
+			}]
+		}
+	}
+};
+
+// >>>>>>>>>>>>>>> //
+// >>>> Viyah >>>> //
+// >>>>>>>>>>>>>>> //
+
+RaceList["sinamsi viyah"] = {
+	regExpSearch : /^.*(?=.*viyah)(?=.*sinamsi).*$/i,
+	name : "Sinamsi viyah",
+	sortname : "Viyah, Sinamsi",
+	source : [["TSA", 0]],
+	plural : "Sinamsi viyah",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	languageProfs : ["Common", "Viyah", 1],
+	skillstxt : "Choose two from Arcana, Investigation, Religion, Insight. You gain expertise in one of these skills.",
+	scores : [0, 0, 0, 0, 0, 0],
+	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Charisma",
+	trait : "Sinamsi viyah (+2 to any ability score and +1 to any ability score, one must be Charisma)\nMystic Step (see notes)",
+	action : [['bonus action', 'Mystic Step']],
+	features : {
+		"mystic step" : {
+			name : "Mystic Step",
+			minlevel : 1,
+			usages : 1,
+			recovery : "short rest",
+			toNotesPage : [{
+				name : "Mystic Step",
+				note : "\nAs a bonus action, you can magically teleport to an unoccupied space you can see within 30 feet. You can use it once before finishing a long or short rest.\nUpon reaching 3rd level, your Mystic Step gains an additional effect:\nOnce you complete a teleportation with Mystic Step, you create a white, flat, opaque square wall of force field with an edge length of 5 feet within 5 feet of you. The wall can be positioned anywhere in space and cannot cause damage. The wall disappears at the end of your next turn.",
+				page3notes : true
+			}]
+		}
+	}
+};
+
+RaceList["irmah viyah"] = {
+	regExpSearch : /^.*(?=.*viyah)(?=.*irmah).*$/i,
+	name : "Irmah viyah",
+	sortname : "Viyah, Irmah",
+	source : [["TSA", 0]],
+	plural : "Irmah viyah",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	languageProfs : ["Common", 1],
+	skillstxt : "Choose one from Athletics, Acrobatics, Stealth, Performance, Intimidation. You gain expertise in the chosen skill.",
+	toolProfs : ["Сalligrapher's or Painter's supplies)", 1],
+	scores : [0, 0, 0, 0, 0, 0],
+	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Charisma",
+	trait : "Irmah viyah (+2 to any ability score and +1 to any ability score, one must be Charisma)\nMystic Step (see notes)",
+	action : [['bonus action', 'Mystic Step']],
+	features : {
+		"mystic step" : {
+			name : "Mystic Step",
+			minlevel : 1,
+			usages : 1,
+			recovery : "short rest",
+			toNotesPage : [{
+				name : "Mystic Step",
+				note : "\nAs a bonus action, you can magically teleport to an unoccupied space you can see within 30 feet. You can use it once before finishing a long or short rest.\nUpon reaching 3rd level, your Mystic Step gains an additional effect:\nAfter you complete a teleport with Mystic Step, you gain advantage on your next attack.",
+				page3notes : true
+			}]
+		}
+	}
+};
+
+RaceList["anhri viyah"] = {
+	regExpSearch : /^.*(?=.*viyah)(?=.*anhri).*$/i,
+	name : "Anhri viyah",
+	sortname : "Viyah, Anhri",
+	source : [["TSA", 0]],
+	plural : "Anhri viyah",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	languageProfs : ["Common", 1], 
+	skillstxt : "Choose one from Persuasion, Deception, Sleight Of Hand, Medicine.",
+	toolProfs : ["Any artisan tool (with expertise)", 1],
+	scores : [0, 0, 0, 0, 0, 0],
+	scorestxt : "+2 to any ability score and +1 to any ability score, one must be Charisma",
+	trait : "Anhri viyah (+2 to any ability score and +1 to any ability score, one must be Charisma)\nMystic Step (see notes)",
+	action : [['bonus action', 'Mystic Step']],
+	features : {
+		"mystic step" : {
+			name : "Mystic Step",
+			minlevel : 1,
+			usages : 1,
+			recovery : "short rest",
+			toNotesPage : [{
+				name : "Mystic Step",
+				note : "\nAs a bonus action, you can magically teleport to an unoccupied space you can see within 30 feet. You can use it once before finishing a long or short rest.\nUpon reaching 3rd level, your Mystic Step gains an additional effect:\nWhen you use Mysterious Step, you can touch one willing creature within 5 feet of you. The creature then moves instead of you, to an unoccupied space of your choice that you can see within 30 feet of you.",
+				page3notes : true
+			}]
 		}
 	}
 };
