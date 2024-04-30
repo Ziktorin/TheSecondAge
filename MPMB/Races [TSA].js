@@ -48,7 +48,22 @@ RaceList["forest terloyt"] = {
               usagescalc : "event.value = Number(How('Proficiency Bonus'));",
 			  toNotesPage : [{
 				name : "Gift of the Avenger of Grace",
-				note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n\u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.   \n\u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.   \n\u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
+				note : desc([ 
+				"My color and shape depend on the light level:", 
+				"\u2022 In the light:",
+				"  Once per turn, when I deal damage to one creature I can reroll all damage dice",
+				"  I must use the second damage roll", 
+				"  I can use this trait a number of times equal to my PB before a long rest",
+				"  I have an advantage on Wisdom (Perception) rolls that rely on sight",
+				"\u2022 In the dark:",
+				"  When I make a melee, ranged or spell attack, I can immediately take the Disengage or Hide",
+				"  action as part of it",
+				"  I can use this trait a number of times equal to my PB before a long rest",
+				"  I have advantage on Wisdom (Perception) rolls that rely on hearing",
+				"\u2022 In dim light:",
+				"  I can choose any of the shapes",
+				"  To change form during combat, I must move at least 10 feet toward a shadow or source",
+				"  of light"]),
 				page3notes : true
 			}]
           },
@@ -56,7 +71,8 @@ RaceList["forest terloyt"] = {
 			name : "Terloytian Adaptations",
 			toNotesPage : [{
 				name : "Terloytian Adaptations",
-				note : "\nYour long and prehensile tail allows you to move with unprecedented agility. You gain a climbing speed equal to your movement speed, and you cannot be slowed by non-magical difficult terrain.",
+				note : desc(["I gain a climbing speed equal to my movement speed, and can't be slowed by non-magical",
+			                 "difficult terrain"]),
 				page3notes : true
 			}],
 			speed : {climb : { spd : 30, enc : 0 }}
@@ -91,22 +107,37 @@ RaceList["desert terloyt"] = {
 	].join("\n"),
     skills : ["Survival"],
     features : {
-        "Gift of the Avenger of Grace" : {
-            name : "Gift of the Avenger of Grace",
-            usages : "Proficiency bonus per ",
-            recovery : "long rest",
-            usagescalc : "event.value = Number(How('Proficiency Bonus'));",
+		"Gift of the Avenger of Grace" : {
+			name : "Gift of the Avenger of Grace",
+			usages : "Proficiency bonus per ",
+			recovery : "long rest",
+			usagescalc : "event.value = Number(How('Proficiency Bonus'));",
 			toNotesPage : [{
-				name : "Gift of the Avenger of Grace",
-				note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n\u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
-				page3notes : true
-			}]
+			  name : "Gift of the Avenger of Grace",
+			  note : desc([ 
+			  "My color and shape depend on the light level:", 
+			  "\u2022 In the light:",
+			  "  Once per turn, when I deal damage to one creature I can reroll all damage dice",
+			  "  I must use the second damage roll", 
+			  "  I can use this trait a number of times equal to my PB before a long rest",
+			  "  I have an advantage on Wisdom (Perception) rolls that rely on sight",
+			  "\u2022 In the dark:",
+			  "  When I make a melee, ranged or spell attack, I can immediately take the Disengage or Hide",
+			  "  action as part of it",
+			  "  I can use this trait a number of times equal to my PB before a long rest",
+			  "  I have advantage on Wisdom (Perception) rolls that rely on hearing",
+			  "\u2022 In dim light:",
+			  "  I can choose any of the shapes",
+			  "  To change form during combat, I must move at least 10 feet toward a shadow or source",
+			  "  of light"]),
+			  page3notes : true
+		  }]
         },
-		"Terloytian Adaptations" : {
+		"Terloytian Adaptations (desert)" : {
 			name : "Terloytian Adaptations",
 			toNotesPage : [{
 				name : "Terloytian Adaptations",
-				note : "\nTo hunt or avoid creatures buried in the sand, the Avenger of Grace has given you a vibration-sensitive tail. You gain a tremor sense over a 15-foot radius. Also, you are adapted to hot climates.",
+				note : desc(["I gain a tremor sense over a 15-foot radius. I am also adapted to hot climates"]),
 				page3notes : true
 			}]
     	},
@@ -141,22 +172,38 @@ RaceList["tundra terloyt"] = {
 	].join("\n"),
     skills : ["Survival"],
     features : {
-        "Gift of the Avenger of Grace" : {
-            name : "Gift of the Avenger of Grace",
-            usages : "Proficiency bonus per ",
-            recovery : "long rest",
-            usagescalc : "event.value = Number(How('Proficiency Bonus'));",
+		"Gift of the Avenger of Grace" : {
+			name : "Gift of the Avenger of Grace",
+			usages : "Proficiency bonus per ",
+			recovery : "long rest",
+			usagescalc : "event.value = Number(How('Proficiency Bonus'));",
 			toNotesPage : [{
-				name : "Gift of the Avenger of Grace",
-				note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n\u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
-				page3notes : true
-			}]
+			  name : "Gift of the Avenger of Grace",
+			  note : desc([ 
+			  "My color and shape depend on the light level:", 
+			  "\u2022 In the light:",
+			  "  Once per turn, when I deal damage to one creature I can reroll all damage dice",
+			  "  I must use the second damage roll", 
+			  "  I can use this trait a number of times equal to my PB before a long rest",
+			  "  I have an advantage on Wisdom (Perception) rolls that rely on sight",
+			  "\u2022 In the dark:",
+			  "  When I make a melee, ranged or spell attack, I can immediately take the Disengage or Hide",
+			  "  action as part of it",
+			  "  I can use this trait a number of times equal to my PB before a long rest",
+			  "  I have advantage on Wisdom (Perception) rolls that rely on hearing",
+			  "\u2022 In dim light:",
+			  "  I can choose any of the shapes",
+			  "  To change form during combat, I must move at least 10 feet toward a shadow or source",
+			  "  of light"]),
+			  page3notes : true
+		  }]
         },
-		"Terloytian Adaptations" : {
+		"Terloytian Adaptations (tundra)" : {
 			name : "Terloytian Adaptations",
 			toNotesPage : [{
 				name : "Terloytian Adaptations",
-				note : "\nYou can use your big, fluffy tail to cover your tracks. You and your group (if you go last) cannot be tracked by footprints on the ground. You are also covered in thick white fur, which makes you adapted to cold climates.",
+				note : desc(["Myself and my group (if I am going last) can't be tracked by footprints on the ground",
+				"I am also covered in thick white fur, which makes me adapted to cold climates"]),
 				page3notes : true
 			}]
     	}
@@ -190,22 +237,38 @@ RaceList["shore terloyt"] = {
 	].join("\n"),
     skills : ["Survival"],
     features : {
-        "Gift of the Avenger of Grace" : {
-            name : "Gift of the Avenger of Grace",
-            usages : "Proficiency bonus per ",
-            recovery : "long rest",
-            usagescalc : "event.value = Number(How('Proficiency Bonus'));",
+		"Gift of the Avenger of Grace" : {
+			name : "Gift of the Avenger of Grace",
+			usages : "Proficiency bonus per ",
+			recovery : "long rest",
+			usagescalc : "event.value = Number(How('Proficiency Bonus'));",
 			toNotesPage : [{
-				name : "Gift of the Avenger of Grace",
-				note : "\nYou are transformed by the fickle force of nature. Your color and shape depend on the light level\n\u2022In the light:\n      Vengeance of the Day: Once per turn, when you deal damage to one creature, you can reroll all damage dice. You must use the second damage roll. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Clear Eyes: You have advantage on Wisdom (Perception) rolls that rely on sight.\n   \u2022In the dark:\n      Grace of the Night: darkness changes your form, helping you hide after an attack. When you make a melee attack, ranged attack, or spell attack, you can immediately take the Disengage or Hide action as part of that attack. You can use this trait a number of times equal to your proficiency bonus before finishing a long rest.\n      Sensitive Ears: You have advantage on Wisdom (Perception) rolls that rely on hearing.\n   \u2022In dim light:\n      You can choose any of the shapes. To change form during combat, you must move at least 10 feet toward a shadow or source of light.",
-				page3notes : true
-			}]
+			  name : "Gift of the Avenger of Grace",
+			  note : desc([ 
+			  "My color and shape depend on the light level:", 
+			  "\u2022 In the light:",
+			  "  Once per turn, when I deal damage to one creature I can reroll all damage dice",
+			  "  I must use the second damage roll", 
+			  "  I can use this trait a number of times equal to my PB before a long rest",
+			  "  I have an advantage on Wisdom (Perception) rolls that rely on sight",
+			  "\u2022 In the dark:",
+			  "  When I make a melee, ranged or spell attack, I can immediately take the Disengage or Hide",
+			  "  action as part of it",
+			  "  I can use this trait a number of times equal to my PB before a long rest",
+			  "  I have advantage on Wisdom (Perception) rolls that rely on hearing",
+			  "\u2022 In dim light:",
+			  "  I can choose any of the shapes",
+			  "  To change form during combat, I must move at least 10 feet toward a shadow or source",
+			  "  of light"]),
+			  page3notes : true
+		  }]
         },
-		"Terloytian Adaptations" : {
+		"Terloytian Adaptations (shore)" : {
 			name : "Terloytian Adaptations",
 			toNotesPage : [{
 				name : "Terloytian Adaptations",
-				note : "\nYou instinctively hold your breath when in danger and can hold it for 1 hour. Your strong tail with seal-like fins gives you a swimming speed of 40 feet.",
+				note : desc(["I instinctively hold my breath when in danger and can hold it for 1 hour", 
+				"My strong tail with seal-like fins gives me a swimming speed of 40 feet"]),
 				page3notes : true,
 			}],
 			speed : { swim : { spd : "40", enc : "20" } }
