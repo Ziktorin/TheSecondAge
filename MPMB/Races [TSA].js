@@ -523,7 +523,7 @@ RaceList["lingre"] = {
 	"\n \u2022 Deathless Nature: I don't need to breathe." +
 	"\n \u2022 Spider Climb: Climbing speed equal to walking speed. At 3rd level, I can move up, down, and across vertical surfaces and upside down along ceilings, while leaving my hands free." +
 	"\n \u2022 Life Siphon (see notes page)" +
-	"\n \u2022 Energy Eater: Only the restoration of hit points from using the Life Siphon feature, or healing gems, can saturate you.",
+	"\n \u2022 Energy Eater: Only the restoration of hit points from using the Life Siphon feature, or healing gems, can saturate me.",
 	features : {
 		"spider climb" : {
 			name : "Spider Climb",
@@ -533,7 +533,26 @@ RaceList["lingre"] = {
 			name : "Life Siphon",
 			toNotesPage : [{
 				name : "Life Siphon",
-				note : "\nYou know the Sapping Sting cantrip. The basic spellcasting ability for it is Intelligence. For you, this cantrip has the following qualities: \n   \u2022Casting time: 1 action\n   \u2022Range: 30 ft.\n   \u2022Components: V,S\n   \u2022Duration: Instantaneous\nYou drain the life force of one visible creature within range. The target must succeed on a Constitution saving throw or take 1d6 necrotic damage and fall prone.\nWhen you attack with this cantrip and the target is a creature that is not a Construct or Undead of Medium size or larger, you can empower yourself in one of the following ways of your choice:\n   You regain hit points equal to the damage you dealt with the cantrip. If the target creature dies from this damage, then you're satiated for the day.\n   You gain a bonus to the next ability check or attack roll you make. The bonus is equal to the damage you dealt with the spell. The bonus lasts until the next use of this ability.\nYou can empower yourself with this cantrip a number of times equal to your proficiency bonus, and you regain all spent uses when you finish a long rest.\nThis spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+				note : desc(["I know the Sapping Sting cantrip. The basic spellcasting ability for it is Intelligence",
+				"For me, this cantrip has the following qualities:",
+				"   \u2022Casting time: 1 action",
+				"   \u2022Range: 30 ft.",
+				"   \u2022Components: V,S",
+				"   \u2022Duration: Instantaneous",
+				"You drain the life force of one visible creature within range. The target must succeed",
+				"on a Constitution saving throw or take 1d6 necrotic damage and fall prone",
+				"When you attack with this cantrip and the target is a creature that is not a Construct or",
+				"Undead of Medium size or larger, you can empower yourself in one of the following ways of",
+				"your choice:",
+				"\u2022 You regain hit points equal to the damage you dealt with the cantrip. If the target",
+				"creature dies from this damage, then you're satiated for the day",
+				"\u2022 You gain a bonus to the next ability check or attack roll you make. The bonus is equal to",
+				"the damage you dealt with the spell. The bonus lasts until the next use of this ability",
+				"You can empower yourself with this cantrip a number of times equal to your PB, and you",
+				"regain all spent uses when you finish a long rest",
+				"This spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6),",
+				"and 17th level (4d6)."
+			               ]),
 				page3notes : true
 			}]
 		}
@@ -599,7 +618,18 @@ RaceList["pokrov"] = {
 			name : "Death's Will",
 			toNotesPage : [{
 				name : "Death's Will",
-				note : "\nYou emit an aura over a 30-foot radius. It disappears when you die. When any humanoid or creature larger than Small dies within the aura's area of effect or as a result of your attack or spell, roll 1d20. If the roll is 10 or more, the creature is stabilized. You can regain one hit die. If the roll is less than 10, the creature dies. You can spend your hit die + mod. Constitution and restore this number of hit points.\nThe undead always die, but you can choose the effect yourself. You can only regain or spend a hit die once per round.\nThis trait can only affect a creature once every 24 hours. It also does not affect Constructs.\nThe number of hit dice affected by this trait increases by 1 when you reach 5th level (2 dice), 11th level (3 dice), and 17th level (4 dice).\n",
+				note : desc(["I emit an aura over a 30-foot radius. It disappears when I die", 
+				"When any humanoid or creature larger than Small dies within the aura's area of effect or as a",
+				"result of my attack or spell, roll 1d20", 
+				"If the roll is 10 or more, the creature is stabilized. I can regain one hit die", 
+				"If the roll is less than 10, the creature dies. I can spend my hit die + Constitution mod. and",
+				"restore this number of hit points",
+				"The undead always die, but I can choose the effect myself. I can only regain or spend a hit die",
+				"once per round",
+				"This trait can only affect a creature once every 24 hours. It also does not affect Constructs",
+				"The number of hit dice affected by this trait increases by 1 when I reach 5th level (2 dice),",
+				"11th level (3 dice), and 17th level (4 dice)"
+			               ]),
 				page3notes : true
 			}]
 		},
@@ -607,7 +637,11 @@ RaceList["pokrov"] = {
 			name : "Eldritch Acolyte",
 			toNotesPage : [{
 				name : "Eldritch Acolyte",
-				note : "\nYou know the Ceremony spell and always remember it. It does not require any material components for you. You cannot create holy water with this spell. You regain hit dice in an amount determined by your Death's Will ability.\n",
+				note : desc(["I know the Ceremony spell and always remember it. It does not require any material", 
+				"components for me", 
+				"I can't create holy water with this spell", 
+				"I regain hit dice in an amount determined by my Death's Will ability"
+			               ]),
 				page3notes : true
 			}]
 		},
@@ -637,7 +671,7 @@ RaceList["weaver"] = {
 	languageProfs : ["Common", "Weaver Sign Language", 1],
 	scorestxt : "+2/+1 to two different ability scores of my choice",
 	scores : [0, 0, 0, 0, 0, 0],
-	trait : "Weaver (+2/+1 to two different ability scores of my choice)\nShapechanger: As an action, I can change my appearance and voice to or from a humanoid-shaped form I have seen, not changing my equipment. I determine the specifics of the form like hair length, eye color, and sex. I can adjust my height and weight, but not so much that my size changes. I revert back when I die. I can make myself appear as a member of another race, though none of my game statistics change.\nLucky: If you roll a 1 on an attack roll, ability check, or saving throw, you may reroll the die and must use the new result, even if it is a 1.",
+	trait : "Weaver (+2/+1 to two different ability scores of my choice)\nShapechanger: As an action, I can change my appearance and voice to or from a humanoid-shaped form I have seen, not changing my equipment. I determine the specifics of the form like hair length, eye color, and sex. I can adjust my height and weight, but not so much that my size changes. I revert back when I die. I can make myself appear as a member of another race, though none of my game statistics change.\nLucky: If I roll a 1 on an attack roll, ability check, or saving throw, I may reroll the die and must use the new result, even if it is a 1.",
 	action : [["action", "Shapechanger"]]
 };
 
@@ -658,7 +692,7 @@ RaceList["beasthide allote"] = {
 	languageProfs : ["Common", "Moon"],
 	vision : [["Darkvision", 60]],
 	skills : ["Athletics"],
-	dmgres : [["Bludgeoning", "Bludgeon. (shifted)"], ["Slashing", "Slash. (shifted)"], ["Piercing", "Piercing. (shifted)"]],
+	dmgres : [["Bludgeoning", "Bludgeon. (shifted)"], ["Slashing", "Slash. (shifted)"], ["Piercing", "Piercing (shifted)"]],
 	age : " reach young adulthood at age 10 and rarely live over 70",
 	height : " range from under 5 to almost 6 feet tall (4'6\" + 2d8\")",
 	weight : " weigh around 135 lb (90 + 2d8 \xD7 2d4 lb)",
@@ -694,7 +728,7 @@ RaceList["longtooth allote"] = {
 		walk : { spd : 30, enc : 20 }
 	},
 	languageProfs : ["Common", "Moon"],
-	dmgres : [["Bludgeoning", "Bludgeon. (shifted)"], ["Slashing", "Slash. (shifted)"], ["Piercing", "Piercing. (shifted)"]],
+	dmgres : [["Bludgeoning", "Bludgeon. (shifted)"], ["Slashing", "Slash. (shifted)"], ["Piercing", "Piercing (shifted)"]],
 	weaponOptions : {
 		baseWeapon : "unarmed strike",
 		regExpSearch : /^(?=.*fangs?)(?=.*long)(?=.*(tooth|teeth)).*$/i,
@@ -742,7 +776,7 @@ RaceList["swiftstride allote"] = {
 		walk : { spd : 30, enc : 20 }
 	},
 	languageProfs : ["Common", "Moon"],
-	dmgres : [["Bludgeoning", "Bludgeon. (shifted)"], ["Slashing", "Slash. (shifted)"], ["Piercing", "Piercing. (shifted)"]],
+	dmgres : [["Bludgeoning", "Bludgeon. (shifted)"], ["Slashing", "Slash. (shifted)"], ["Piercing", "Piercing (shifted)"]],
 	vision : [["Darkvision", 60]],
 	skills : ["Acrobatics"],
 	age : " reach young adulthood at age 10 and rarely live over 70",
@@ -781,7 +815,7 @@ RaceList["wildhunt allote"] = {
 		walk : { spd : 30, enc : 20 }
 	},
 	languageProfs : ["Common", "Moon"],
-	dmgres : [["Bludgeoning", "Bludgeon. (shifted)"], ["Slashing", "Slash. (shifted)"], ["Piercing", "Piercing. (shifted)"]],
+	dmgres : [["Bludgeoning", "Bludgeon. (shifted)"], ["Slashing", "Slash. (shifted)"], ["Piercing", "Piercing (shifted)"]],
 	vision : [["Darkvision", 60]],
 	skills : ["Survival"],
 	age : " reach young adulthood at age 10 and rarely live over 70",
@@ -836,7 +870,7 @@ RaceList["sinamsi viyah"] = {
 			recovery : "short rest",
 			toNotesPage : [{
 				name : "Mystic Step",
-				note : "\nAs a bonus action, you can magically teleport to an unoccupied space you can see within 30 feet. You can use it once before finishing a long or short rest.\nUpon reaching 3rd level, your Mystic Step gains an additional effect:\nOnce you complete a teleportation with Mystic Step, you create a white, flat, opaque square wall of force field with an edge length of 5 feet within 5 feet of you. The wall can be positioned anywhere in space and cannot cause damage. The wall disappears at the end of your next turn.",
+				note : "\nAs a bonus action, I can magically teleport to an unoccupied space you can see within 30 feet. I can use this feature once before finishing a long or short rest.\nUpon reaching 3rd level, my Mystic Step gains an additional effect:\nOnce I complete a teleportation with Mystic Step, I create a white, flat, opaque square wall of force field with an edge length of 5 feet within 5 feet of me. The wall can be positioned anywhere in space and can't cause damage. The wall disappears at the end of my next turn.",
 				page3notes : true
 			}]
 		}
@@ -868,7 +902,7 @@ RaceList["irmah viyah"] = {
 			recovery : "short rest",
 			toNotesPage : [{
 				name : "Mystic Step",
-				note : "\nAs a bonus action, you can magically teleport to an unoccupied space you can see within 30 feet. You can use it once before finishing a long or short rest.\nUpon reaching 3rd level, your Mystic Step gains an additional effect:\nAfter you complete a teleport with Mystic Step, you gain advantage on your next attack.",
+				note : "\nAs a bonus action, I can magically teleport to an unoccupied space I can see within 30 feet. I can use this feature once before finishing a long or short rest.\nUpon reaching 3rd level, my Mystic Step gains an additional effect:\nAfter I complete a teleport with Mystic Step, I gain advantage on my next attack.",
 				page3notes : true
 			}]
 		}
@@ -900,7 +934,7 @@ RaceList["anhri viyah"] = {
 			recovery : "short rest",
 			toNotesPage : [{
 				name : "Mystic Step",
-				note : "\nAs a bonus action, you can magically teleport to an unoccupied space you can see within 30 feet. You can use it once before finishing a long or short rest.\nUpon reaching 3rd level, your Mystic Step gains an additional effect:\nWhen you use Mysterious Step, you can touch one willing creature within 5 feet of you. The creature then moves instead of you, to an unoccupied space of your choice that you can see within 30 feet of you.",
+				note : "\nAs a bonus action, I can magically teleport to an unoccupied space I can see within 30 feet. I can use this feature once before finishing a long or short rest.\nUpon reaching 3rd level, my Mystic Step gains an additional effect:\nWhen I use Mysteic Step, I can touch one willing creature within 5 feet of myself. The creature then moves instead of me, to an unoccupied space of my choice that I can see within 30 feet of myself.",
 				page3notes : true
 			}]
 		}
